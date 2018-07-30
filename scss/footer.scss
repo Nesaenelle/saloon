@@ -1,4 +1,4 @@
-.footer {
+    .footer {
     height: 417px;
     .container {
         display: flex; // align-items: flex-start;
@@ -12,7 +12,7 @@
         width: 495px;
         img {
             padding-right: 33px;
-            max-width: 378px;
+            max-width: 410px;
         }
     }
     &__list {
@@ -50,9 +50,9 @@
         justify-content: flex-end;
         align-items: flex-end;
         min-height: 100%;
-        padding-right: 20px;
+        padding-right: 24px;
         img {
-            margin-left: 21px;
+            margin-left: 22px;
         }
     }
 }

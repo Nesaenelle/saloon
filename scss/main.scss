@@ -141,7 +141,7 @@ main {
             position: absolute;
             width: 285px;
             height: 100px;
-            right: 44px;
+            right: 47px;
             bottom: 0;
             background: #fff;
             display: flex;
@@ -222,12 +222,27 @@ main {
 }
 
 .lazy-load {
-    margin: 50px 0;
+    margin: 162px 0;
     img {
         margin: auto;
         display: block;
     }
 }
+
+@keyframes rotating {
+    from {
+        ;
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.rotating {
+    animation: rotating 2s linear infinite;
+}
+
 
 .news-page {
     .container {
@@ -242,7 +257,7 @@ main {
         justify-content: space-between;
         $c: &;
         &_item {
-            width: 48%;
+            width: 49%;
             &_img {
                 overflow: hidden;
 
@@ -262,36 +277,77 @@ main {
             }
             &_date {
                 text-align: center;
-                padding: 20px;
-                font-size: 30px;
+
+                font-size: 32px;
                 position: relative;
+                margin-top: 55px;
+                text-transform: uppercase;
                 &:after {
                     position: absolute;
                     content: '';
-                    width: 65px;
+                    width: 106px;
                     margin: auto;
                     left: 0;
                     right: 0;
-                    bottom: 0px;
+                    bottom: -25px;
                     background: #000;
-                    height: 2px;
+                    height: 1px;
                 }
             }
             &_title {
-                text-align: center;
-                padding: 20px;
-                font-size: 30px;
+                text-align: center; // padding: 20px;
+                font-size: 36px;
                 font-weight: 600;
                 text-transform: uppercase;
+                line-height: 1.3em;
             }
         }
         &#{$c} {
             $list: &;
-
+            &_popular {
+                // margin-bottom: 105px;
+                .news-page__list_item {
+                    padding-bottom: 125px;
+                    &_date {
+                        margin-top: 50px;
+                        font-size: 32px;
+                        letter-spacing: 1px;
+                    }
+                    &_title {
+                        font-size: 36px;
+                        margin-top: 59px;
+                        letter-spacing: 2.3px;
+                        line-height: 1.2em;
+                    }
+                    &_img {
+                        height: 570px;
+                        position: relative;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            margin: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
             &_all {
                 // #{$list}_item {
                 .news-page__list_item {
                     width: calc(100%/3 - 20px);
+                    &_title {
+                        font-size: 32px;
+                        margin-top: 62px;
+                        letter-spacing: 1.1px;
+                    }
+                    &_date {
+                        margin-top: 50px;
+                        font-size: 26px;
+                        letter-spacing: 1.5px;
+                    }
                 }
             }
         }

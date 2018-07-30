@@ -45,16 +45,14 @@
         }
     }
     &-transparent-grey {
-        min-width: 290px;
-        font-size: 20px;
+        min-width: 286px;
+        font-size: 19px;
         background: 0 0;
         border: 3px solid #7c7c7c;
-        padding: 18px 36px 18px 43px;
+        padding: 19px 33px 17px 36px;
         color: #7c7c7c;
-        font-weight: 600;
         letter-spacing: 2px;
         border-radius: 3px;
-        text-transform: uppercase;
         &:hover {
             color: #fff;
             &:after {
