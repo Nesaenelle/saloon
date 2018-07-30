@@ -74,14 +74,8 @@
 }
 
 @media screen and (max-width: 980px) {
-    // .desktop {
-    //     display: none;
-    // }
-    // .mobile {
-    //     display: block;
-    // }
     main {
-        min-height: calc(100% - 100px - 417px);
+        min-height: calc(100% - 100px - $footer-top-height - $footer-bottom-height);
     }
     .home-page__item {
         height: calc(100vh - 100px);

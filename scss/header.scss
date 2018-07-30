@@ -22,14 +22,14 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 43px; // padding-bottom: 11px;
+        padding-right: 35px; // padding-bottom: 11px;
         .btn {
             margin-top: -18px;
         }
     }
     &__logo {
         width: 277px;
-        margin: -9px 0 0 -24px;
+        margin: -9px 0 0 -18px;
     }
     &__language {
         display: flex;
@@ -72,9 +72,10 @@
             font-size: 24px;
             text-transform: uppercase;
             font-weight: 800;
-            letter-spacing: 1.7px;
-            margin-left: 80px;
-            margin-top: 14px;
+            letter-spacing: 1.9px;
+            margin-left: 77px;
+            margin-top: 15px;
+            position: relative;
             position: relative;
 
             &:after {

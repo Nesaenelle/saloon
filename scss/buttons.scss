@@ -46,13 +46,14 @@
     }
     &-transparent-grey {
         min-width: 286px;
-        font-size: 19px;
+        font-size: 20px;
         background: 0 0;
         border: 3px solid #7c7c7c;
-        padding: 19px 33px 17px 36px;
+        padding: 20px 33px 14px 36px;
         color: #7c7c7c;
-        letter-spacing: 2px;
-        border-radius: 3px;
+        letter-spacing: 1.5px;
+        border-radius: 2px;
+        font-weight: 600;
         &:hover {
             color: #fff;
             &:after {

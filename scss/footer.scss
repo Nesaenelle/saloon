@@ -1,15 +1,19 @@
-    .footer {
-    height: 417px;
-    .container {
-        display: flex; // align-items: flex-start;
-        justify-content: space-between;
-        padding: 75px 92px;
-    }
+.footer {
+    // height: 417px;
+
     .btn {
         display: none;
     }
+    &-top {
+        height: $footer-top-height;
+        .container {
+            display: flex; // align-items: flex-start;
+            justify-content: space-between;
+            padding: 74px 97px;
+        }
+    }
     &__logo {
-        width: 495px;
+        width: 502px;
         img {
             padding-right: 33px;
             max-width: 410px;
@@ -17,7 +21,7 @@
     }
     &__list {
         display: flex;
-        margin-top: -5px;
+        margin-top: -3px;
         ul {
             width: 330px;
             padding: 0 64px 0 65px;
@@ -28,11 +32,12 @@
             li {
                 a {
                     color: #7d7d7d;
-                    font-size: 22px;
+                    font-size: 20px;
                     font-weight: 300;
-                    margin: 0px 0 16px 0px;
+                    margin: 0 0 19px;
                     display: block;
-                    transition: 0.3s;
+                    transition: .3s;
+                    letter-spacing: 1.4px;
                     &:hover {
                         font-weight: 600;
                         color: #000;
@@ -50,9 +55,35 @@
         justify-content: flex-end;
         align-items: flex-end;
         min-height: 100%;
-        padding-right: 24px;
+        padding-right: 14px;
+        font-size: 0;
+        padding-bottom: 5px;
         img {
-            margin-left: 22px;
+            margin-left: 25px;
+        }
+    }
+    &-bottom {
+        background: #1d1d1b;
+        height: $footer-bottom-height;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 97px;
+            height: 100%;
+        }
+        &__copyright {
+            color: #41413d;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+        &__author {
+            color: #41413d;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+            padding-right: 14px;
         }
     }
 }

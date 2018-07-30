@@ -4,16 +4,14 @@ body {
 }
 
 main {
-    // background: #e2e7ee;
-    // padding-top: 230px;
-    min-height: calc(100% - 156px - 417px);
+    min-height: calc(100% - 156px - $footer-top-height - $footer-bottom-height);
 }
 
 .container {
     width: 100%;
     max-width: 1920px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .title {
@@ -140,8 +138,8 @@ main {
         &_next {
             position: absolute;
             width: 285px;
-            height: 100px;
-            right: 47px;
+            height: 102px;
+            right: 44px;
             bottom: 0;
             background: #fff;
             display: flex;
