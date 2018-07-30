@@ -38,7 +38,7 @@ main {
     }
     &__item {
         height: calc(100vh - 156px);
-        align-items: center; 
+        align-items: center;
         overflow: hidden;
         position: relative;
         display: flex;
@@ -48,9 +48,7 @@ main {
         &:first-child {
             justify-content: center;
         }
-        &.active {
-            
-        }
+        &.active {}
         img {
             width: 100%;
             position: absolute;
@@ -61,7 +59,7 @@ main {
             border: none;
             position: absolute;
             left: 0;
-            top:0;
+            top: 0;
         }
         .separator {
             width: 3px;
@@ -122,12 +120,12 @@ main {
             position: relative;
             &:before {
                 content: '';
-                    background: url(img/double-arrow-left.png);
-                    width: 53px;
-                    height: 64px;
-                    position: absolute;
-                    left: -97px;
-                    top: -26px;
+                background: url(img/double-arrow-left.png);
+                width: 53px;
+                height: 64px;
+                position: absolute;
+                left: -97px;
+                top: -26px;
             }
             &:after {
                 content: '';
@@ -247,7 +245,16 @@ main {
             width: 48%;
             &_img {
                 overflow: hidden;
+
+                &:hover {
+
+
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
                 img {
+                    transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
                     display: block;
                     margin: auto;
                     max-width: 625px;

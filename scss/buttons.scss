@@ -4,7 +4,7 @@
     border: none;
     position: relative;
     transition: 0.2s;
-    font-family: Circe,sans-serif;
+    font-family: Circe, sans-serif;
     position: relative;
     &:after {
         content: '';
@@ -23,18 +23,23 @@
     &-black {
         color: #fff;
         font-weight: 600;
-        font-size: 24px;
-        background: #000;
+        font-size: 24px; // background: #000;
+        background: 0 0;
         padding: 20px 40px;
         margin: auto;
         display: block;
+        border: 3px solid transparent;
         text-transform: uppercase;
-        position: relative;
-
+        &:after {
+            background: #000;
+            opacity: 1;
+            width: 100%;
+        }
         &:hover {
-            color: #fff;
+            color: #000;
+            border: 3px solid #000;
             &:after {
-                width: 100%;
+                width: 0%;
                 opacity: 1;
             }
         }
