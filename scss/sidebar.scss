@@ -1,0 +1,56 @@
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 53px 169px;
+    background: #fff;
+    z-index: 100;
+    width: 595px;
+    max-width: 595px;
+    min-height: 100%; ///calc(100% - 156px - 417px);
+    // opacity: 0;
+    visibility: hidden;
+    left: -610px;
+    transition: 0.5s;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+    &.active {
+        left: 0; // opacity: 1;
+        visibility: visible;
+    }
+    &__close {
+        position: absolute;
+        right: 30px;
+        cursor: pointer;
+    }
+    &__socials {
+        img {
+            margin-left: 21px;
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+    .btn {
+        display: none;
+    }
+    ul {
+        li {
+            margin-bottom: 85px;
+            a {
+                text-transform: uppercase;
+                font-size: 24px;
+                color: #1d1d1b;
+                font-weight: 300;
+                transition: 0.3s;
+                &.active {
+                    font-weight: 600;
+                    color: #000;
+                }
+                &:hover {
+                    font-weight: 600;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

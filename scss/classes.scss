@@ -1,0 +1,119 @@
+// .flex {
+//     display: flex!important;
+// }
+
+// .flex-1 {
+//     flex: 1;
+// }
+
+// .inline-flex {
+//     display: inline-flex;
+// }
+
+// .block {
+//     display: block;
+// }
+
+// .inline-block {
+//     display: inline-block!important;
+// }
+
+// .bold {
+//     font-weight: 600;
+// }
+
+// .j-c-s-b {
+//     justify-content: space-between;
+// }
+
+// .a-i-c {
+//     align-items: center;
+// }
+
+// .relative {
+//     position: relative;
+// }
+
+// .full-width {
+//     width: 100%!important;
+// }
+
+// .pointer {
+//     cursor: pointer;
+// }
+
+// .italic {
+//     font-style: italic;
+// }
+
+// .underline {
+//     &:hover {
+//         text-decoration: underline;
+//     }
+// }
+
+// .colx2 {
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     .col-item {
+//         width: 48%;
+//     }
+// }
+
+// .hidden {
+//     display: none!important;
+// }
+
+// .top-0 {
+//     top: 0!important;
+// }
+
+// .width-180px {
+//     width: 180px;
+// }
+
+// .text-left {
+//     text-align: left!important;
+// }
+
+// .t-right {
+//     text-align: right;
+// }
+
+// .text-right {
+//     text-align: right!important;
+// }
+
+// .nowrap {
+//     white-space: nowrap;
+// }
+// /* MARGINS */
+
+// @for $i from 0 through 20 {
+//     .mt-#{$i * 5} {
+//         margin-top: $i * 5 + px!important;
+//     }
+//     .mb-#{$i * 5} {
+//         margin-bottom: $i * 5 + px!important;
+//     }
+//     .ml-#{$i * 5} {
+//         margin-left: $i * 5 + px!important;
+//     }
+//     .mr-#{$i * 5} {
+//         margin-right: $i * 5 + px!important;
+//     }
+
+
+//     .pl-#{$i * 5} {
+//         padding-left: $i * 5 + px!important;
+//     }
+// }
+
+// /* WIDTH */
+
+// @for $i from 0 through 20 {
+//     .width-#{$i * 5} {
+//         width: $i * 5 + %!important;
+//     }
+// }
