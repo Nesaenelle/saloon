@@ -42,7 +42,7 @@
             <li><a href="team.html">Команда</a></li>
             <li><a href="vacancy.html">Вакансии</a></li>
             <li><a href="news.html">Новости</a></li>
-            <li><a class="active"  href="contacts.html">Контакты</a></li>
+            <li><a class="active" href="contacts.html">Контакты</a></li>
             <li><a href="product.html">Онлайн-магазин</a></li>
         </ul>
         <div class="sidebar__socials">
@@ -52,7 +52,8 @@
         </div>
     </div>
     <main class="contacts-page">
-        <div class="info-page__bg" style="background: url(img/contacts.png)"></div>
+        <div class="info-page__bg" style="background: url(img/contacts.png)">
+            <h1>контакты</h1></div>
         <div class="container">
             <div class="contacts-page__phone">+7 (812) 956-38-18</div>
             <div class="contacts-page__email">hair@irina-anderson.ru</div>
@@ -66,9 +67,23 @@
                 </div>
             </div>
         </div>
+        <div id="map"></div>
+
+        <div class="form">
+            <div class="">Задайте нам вопрос</div>
+            <form action="">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="E-mail">
+                <input type="text" placeholder="+7 ( )">
+                <textarea placeholder="Ваше имя" placeholder="Ваш вопрос"></textarea>
+                <button class="btn btn-transparent-grey"><span>Отправить</span></button>
+            </form>
+        </div>
+        <div class="form">
+        </div>
     </main>
     <footer class="footer">
-        <div class="footer-top">        
+        <div class="footer-top">
             <button class="btn btn-transparent-grey mobile" data-modal-btn="online"><span>ОНЛАЙН-ЗАПИСЬ</span></button>
             <div class="container">
                 <div class="footer__logo">
@@ -130,8 +145,24 @@
             </div>
         </div>
     </div>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5gs-Kw7zqbPtePvy3DUbZcnWNCpibD0Y&callback=initMap" async defer></script>
     <script src="js/all.js"></script>
+    <script>
+    var map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 55.6579826, lng: 37.52337 },
+            zoom: 17
+        });
+        var myLatLng = { lat: 55.6579826, lng: 37.52337 };
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+    </script>
 </body>
 
 </html>
