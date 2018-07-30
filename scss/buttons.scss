@@ -6,7 +6,10 @@
     transition: 0.2s;
     font-family: Circe, sans-serif;
     position: relative;
-    &:after {
+    span {
+        position: relative;
+    }
+    &:before {
         content: '';
         width: 0%;
         margin: auto;
@@ -18,7 +21,7 @@
         position: absolute;
         top: 0;
         transition: 0.2s;
-        z-index: -1;
+        // z-index: -1;
     }
     &-black {
         color: #fff;
@@ -30,7 +33,7 @@
         display: block;
         border: 3px solid transparent;
         text-transform: uppercase;
-        &:after {
+        &:before {
             background: #000;
             opacity: 1;
             width: 100%;
@@ -38,7 +41,7 @@
         &:hover {
             color: #000;
             border: 3px solid #000;
-            &:after {
+            &:before {
                 width: 0%;
                 opacity: 1;
             }
@@ -56,7 +59,7 @@
         font-weight: 600;
         &:hover {
             color: #fff;
-            &:after {
+            &:before {
                 width: 100%;
                 opacity: 1;
             }
