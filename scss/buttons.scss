@@ -2,6 +2,24 @@
     outline: none;
     cursor: pointer;
     border: none;
+    position: relative;
+    transition: 0.2s;
+    font-family: Circe,sans-serif;
+    position: relative;
+    &:after {
+        content: '';
+        width: 0%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: #7c7c7c;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: 0.2s;
+        z-index: -1;
+    }
     &-black {
         color: #fff;
         font-weight: 600;
@@ -11,17 +29,34 @@
         margin: auto;
         display: block;
         text-transform: uppercase;
+        position: relative;
+
+        &:hover {
+            color: #fff;
+            &:after {
+                width: 100%;
+                opacity: 1;
+            }
+        }
     }
     &-transparent-grey {
         min-width: 290px;
         font-size: 20px;
         background: 0 0;
         border: 3px solid #7c7c7c;
-        padding: 22px 36px 18px 43px;
+        padding: 18px 36px 18px 43px;
         color: #7c7c7c;
         font-weight: 600;
         letter-spacing: 2px;
         border-radius: 3px;
+        text-transform: uppercase;
+        &:hover {
+            color: #fff;
+            &:after {
+                width: 100%;
+                opacity: 1;
+            }
+        }
     }
     &:active {
         transform: translateY(1px);
