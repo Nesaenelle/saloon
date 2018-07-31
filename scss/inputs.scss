@@ -22,10 +22,10 @@ input {
         color: #a1a1a1;
     }
     &.invalid {
-        border-color: #f85359;
+        border-color: #f85359!important;
     }
     &.valid {
-        border-color: #39b54a;
+        border-color: #39b54a!important;
     }
 }
 textarea {

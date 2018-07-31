@@ -55,16 +55,51 @@
         <div class="info-page__bg" style="background: url(img/contacts.png)">
             <h1>контакты</h1></div>
         <div class="container">
-            <div class="contacts-page__phone">+7 (812) 956-38-18</div>
-            <div class="contacts-page__email">hair@irina-anderson.ru</div>
+            <div class="contacts-page__phone"><img src="img/phone.png" alt="">
+                <div>+7 (812) 956-38-18</div>
+            </div>
+            <div class="contacts-page__email"><img src="img/email.png" alt="">
+                <div>hair@irina-anderson.ru</div>
+            </div>
             <div class="grey-line"></div>
-            <div class="contacts-page__list">
-                <div class="contacts-page__list_item">
-                    <div class="contacts-page__list_item_address"></div>
-                    <div class="contacts-page__list_item_place"></div>
-                    <div class="contacts-page__list_item_phone"></div>
-                    <img src="" alt="">
+        </div>
+        <div class="contacts-page__list">
+            <div class="contacts-page__list_item">
+                <img src="img/gray-marker.png" alt="" class="contacts-page__list_item_marker">
+                <div class="contacts-page__list_item_address"> Вознесенский пр., 1
+                    <br> санкт-петербург
                 </div>
+                <div class="contacts-page__list_item_place">Four Season Hotel Lion Palace | 2 этаж </div>
+                <div class="contacts-page__list_item_phone">Тел.: 8 (921) 917-38-18</div>
+                <div  class="contacts-page__list_item_img"><img src="img/contacts1.png" alt=""></div>
+                
+            </div>
+            <div class="contacts-page__list_item">
+                <img src="img/gray-marker.png" alt="" class="contacts-page__list_item_marker">
+                <div class="contacts-page__list_item_address"> Владимирский пр., 3
+                    <br>Санкт-Петербург
+                </div>
+                <div class="contacts-page__list_item_phone"> Тел.: 956-38-18</div>
+                <div class="contacts-page__list_item_place"></div>
+                <div  class="contacts-page__list_item_img"><img src="img/contacts2.png" alt=""></div>
+            </div>
+            <div class="contacts-page__list_item">
+                <img src="img/gray-marker.png" alt="" class="contacts-page__list_item_marker">
+                <div class="contacts-page__list_item_address"> Невский пр., 57
+                    <br>санкт-петербург
+                </div>
+                <div class="contacts-page__list_item_place">Corinthia Hotel</div>
+                <div class="contacts-page__list_item_phone">тел.: 965-08-53</div>
+                <div  class="contacts-page__list_item_img"><img src="img/contacts3.png" alt=""></div>
+            </div>
+            <div class="contacts-page__list_item">
+                <img src="img/gray-marker.png" alt="" class="contacts-page__list_item_marker">
+                <div class="contacts-page__list_item_address"> пер. Антоненко, 2
+                    <br>Санкт-Петербург
+                </div>
+                <div class="contacts-page__list_item_place">LOTTE HOTEL ST. PETERSBURG</div>
+                <div class="contacts-page__list_item_phone"> Тел.: 956-38-18</div>
+                <div  class="contacts-page__list_item_img"><img src="img/contacts4.png" alt=""></div>
             </div>
         </div>
         <div id="map"></div>
@@ -78,16 +113,18 @@
                         <input class="phone-input" type="text" placeholder="+7 ( )" data-pattern="phone">
                     </div>
                     <div class="question-form__col">
-                        <textarea placeholder="Ваше имя" placeholder="Ваш вопрос"></textarea>
-                        <button class="btn btn-transparent-grey"  type="submit"><span>Отправить</span></button>
+                        <textarea placeholder="Ваш вопрос"></textarea>
+                        <button class="btn btn-transparent-grey" type="submit"><span>Отправить</span></button>
                     </div>
                 </form>
             </div>
         </div>
         <div class="subscription-form">
             <div class="container">
-                <div class="subscription-form__title">подпишитесь
-                    <small>на наши новости</small></div>
+                <div class="subscription-form__title">
+                    подпишитесь
+                        <small>на наши новости</small></div>
+                </div>
                 <form novalidate>
                     <input type="text" placeholder="E-mail" data-pattern="email">
                     <button class="btn btn-white" type="submit"><span>подписаться</span></button>
@@ -156,11 +193,11 @@
             </div>
         </div>
     </div>
-
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/all.js"></script>
-<!--     <script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1xJi0Zin_R5E4EALJw_9yHI_Q-HeLNWY&callback=initMap" async defer></script>
+    <script>
     var map;
 
     function initMap() {
@@ -175,7 +212,7 @@
             title: 'Hello World!'
         });
     }
-    </script> -->
+    </script>
 </body>
 
 </html>
