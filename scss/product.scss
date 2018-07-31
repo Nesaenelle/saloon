@@ -98,12 +98,12 @@
         z-index: 12;
         box-shadow: 0 10px 40px -15px #000;
         display: flex;
-        & > div:first-child {
+        &>div:first-child {
             border-right: 1px solid #d6d6d6;
         }
         ul {
             width: 469px;
-            li{
+            li {
                 cursor: pointer;
                 font-size: 24px;
                 color: #2d2528;
@@ -236,8 +236,7 @@
             margin-top: 30px;
             letter-spacing: 2.4px;
             line-height: 40px;
-            min-height: 85px;
-            // transition: 0.3s;
+            min-height: 85px; // transition: 0.3s;
             &:hover {
                 text-decoration: underline;
             }
@@ -334,12 +333,15 @@
 
 .product-page {
     margin-top: 85px;
+    .container {
+        padding: 0;
+    }
     &__details {
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
         &_left {
-            width: 50%;
-            padding: 0px 25px 0 25px;
+            width: 50%; // padding: 0px 25px 0 25px;
         }
         &_right {
             width: 43%;
@@ -357,11 +359,14 @@
             height: 1058px;
             position: relative;
             overflow: hidden;
+            margin-top: -40px;
+            transition: 0.3s;
+            overflow: hidden;
+            $c: &;
             img {
                 max-width: 700px;
                 margin: auto;
-                display: block;
-                // width: 100%;
+                display: block; // width: 100%;
                 max-width: 100%;
                 position: absolute;
                 left: 0;
@@ -370,13 +375,51 @@
                 top: 0;
                 bottom: 0;
             }
+            &:hover {
+                box-shadow: 10px 10px 50px -20px #000;
+                #{$c}_left,
+                #{$c}_right {
+                    display: block;
+                }
+            }
+            &_left {
+                background: url(img/product-left-arrow.png) no-repeat;
+                position: absolute;
+                left: 20%;
+                bottom: 32px;
+                width: 80px;
+                height: 30px;
+                opacity: .5;
+                cursor: pointer;
+                transition: 0.3s;
+                display: none;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            &_right {
+                background: url(img/product-right-arrow.png) no-repeat;
+                position: absolute;
+                right: 15%;
+                bottom: 32px;
+                width: 80px;
+                height: 30px;
+                opacity: .5;
+                cursor: pointer;
+                transition: 0.3s;
+                display: none;
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
         &_thumbs {
             display: flex;
             justify-content: space-between;
             width: 619px;
             /* margin: auto; */
-            margin-left: 135px;
+            margin-left: 180px;
+            margin-top: 38px;
             &_item {
                 width: 190px;
                 height: 190px;
@@ -384,6 +427,7 @@
                 cursor: pointer;
                 border-radius: 3px;
                 overflow: hidden;
+                transition: 0.3s;
                 img {
                     width: 100%;
                 }
@@ -423,11 +467,23 @@
     &__services {
         display: flex;
         justify-content: space-between;
-        margin: 247px 0;
+        margin: 247px 0 144px 0;
         padding: 0px 48px;
         &_item {
             width: calc(100%/3);
             text-align: center;
+            position: relative;
+            height: 350px;
+            $c: &;
+            &:hover {
+                #{$c}_arrow {
+                    opacity: 0.5;
+                    bottom: -135px;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
             &_title {
                 font-size: 30px;
                 position: relative;
@@ -446,9 +502,22 @@
             }
             &_descr {
                 font-size: 24px;
-                color: #7c7c7c;
-                // width: 60%;
+                color: #7c7c7c; // width: 60%;
                 margin: 64px auto 0;
+                position: relative;
+            }
+            &_arrow {
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                opacity: 0;
+                transition: 0.3s;
+                width: 55px;
+                img{
+                    width: 100%;
+                }
             }
         }
     }

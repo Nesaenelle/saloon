@@ -1,0 +1,243 @@
+.contacts-page {
+    #map {
+        height: 825px;
+        width: 100%;
+    }
+    &__phone {
+        color: #2d2528;
+        font-size: 26px;
+        text-align: center;
+        margin-top: 65px;
+        text-transform: uppercase;
+        &>div {
+            font-size: 26px;
+            letter-spacing: 2.4px;
+            /* font-weight: 400; */
+            margin-top: 11px;
+        }
+    }
+    &__email {
+        color: #2d2528;
+        font-size: 26px;
+        text-align: center;
+        margin-top: 12px;
+        text-transform: uppercase;
+        &>div {
+            font-size: 26px;
+            letter-spacing: 2.7px;
+            /* font-weight: 400; */
+            margin-top: 3px;
+        }
+    }
+    .grey-line {
+        width: 91%;
+        margin: 89px auto;
+        border: 1px solid #ccc;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1920px;
+        &_item {
+            width: calc(50% - 9px);
+            margin-bottom: 71px;
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-bottom: 18px;
+            }
+            &_address {
+                font-size: 24px;
+                color: #2d2528;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 31px;
+                line-height: 33px;
+                letter-spacing: 2px;
+            }
+            &_place {
+                font-size: 24px;
+                color: #2d2528;
+                text-transform: uppercase;
+                text-align: center;
+                height: 35px;
+                margin-top: 14px;
+                letter-spacing: 2.4px;
+            }
+            &_phone {
+                font-size: 24px;
+                color: #2d2528;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 12px;
+                letter-spacing: 2px;
+            }
+            &_marker {
+                width: 26px;
+                margin: auto;
+                display: block;
+            }
+            &_img {
+                width: 100%;
+                margin-top: 61px;
+                overflow: hidden;
+                font-size: 0;
+                &:hover {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+                img {
+                    width: 100%;
+                    transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+            }
+        }
+    }
+
+    .question-form {
+
+        margin-bottom: 122px;
+        form {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 55px 0 102px;
+            input {
+                padding: 20px 30px 18px 30px;
+                font-size: 28px;
+                margin-bottom: 31px;
+                font-weight: 300;
+            }
+            textarea {
+                padding: 20px 30px 18px 30px;
+                font-size: 28px;
+                margin-bottom: 35px;
+                font-weight: 300;
+                height: 194px;
+                letter-spacing: 1.4px;
+                font-size: 26px;
+            }
+        }
+        &__col {
+            width: calc(45% + 10px);
+        }
+        &__title {
+            font-size: 36px;
+            text-align: center;
+            color: #000;
+            margin: 99px 0 126px 0;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 3.6px;
+            &:after {
+                position: absolute;
+                content: '';
+                width: 240px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                bottom: -24px;
+                background: #000;
+                height: 2px;
+            }
+        }
+        .btn {
+            float: right;
+        }
+    }
+    .subscription-form {
+        background: url(img/subscr.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        margin-bottom: 49px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .7);
+        }
+        .container {
+            padding: 96px 60px;
+            position: relative;
+        }
+        &__title {
+            font-size: 48px;
+            text-align: center;
+            color: #fff;
+            margin: 0;
+            position: relative;
+            letter-spacing: 4.9px;
+            text-transform: uppercase;
+            small {
+                font-size: 34px;
+                display: block;
+                margin-top: -10px;
+                letter-spacing: 3.3px;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                width: 35%;
+                margin: auto;
+                left: 0; // right: 0;
+                top: 30px;
+                background: #fff;
+                height: 2px;
+                pointer-events: none;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                width: 35%;
+                margin: auto;
+                right: 0; // right: 0;
+                top: 30px;
+                background: #fff;
+                height: 2px;
+                pointer-events: none;
+            }
+        }
+        form {
+            padding: 47px 0;
+            margin: auto;
+            display: block;
+            width: 682px;
+            text-align: center;
+            position: relative;
+            input {
+                padding: 22px 37px 19px;
+                font-size: 26px;
+                margin-bottom: 31px;
+                font-weight: 300;
+                background: 0 0;
+                border-color: #fff;
+                color: #fff;
+                letter-spacing: 0.2px;
+                &::-webkit-input-placeholder {
+                    color: #fff;
+                }
+                &::-moz-placeholder {
+                    color: #fff;
+                }
+                /* Firefox 19+ */
+                &:-moz-placeholder {
+                    color: #fff;
+                }
+                /* Firefox 18- */
+                &:-ms-input-placeholder {
+                    color: #fff;
+                }
+
+            }
+        }
+        .btn {
+            margin: 113px auto 92px;
+            padding: 18px 20px;
+        }
+    }
+}

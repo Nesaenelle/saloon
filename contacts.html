@@ -56,10 +56,10 @@
             <h1>контакты</h1></div>
         <div class="container">
             <div class="contacts-page__phone"><img src="img/phone.png" alt="">
-                <div>+7 (812) 956-38-18</div>
+                <div><a href="tel:+78129563818">+7 (812) 956-38-18</a></div>
             </div>
             <div class="contacts-page__email"><img src="img/email.png" alt="">
-                <div>hair@irina-anderson.ru</div>
+                <div><a href="mailto:hair@irina-anderson.ru">hair@irina-anderson.ru</a></div>
             </div>
             <div class="grey-line"></div>
         </div>
@@ -202,13 +202,15 @@
 
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: 55.6579826, lng: 37.52337 },
-            zoom: 17
+            center: { lat: 59.9352358, lng: 30.308202 },
+            zoom: 18
         });
-        var myLatLng = { lat: 55.6579826, lng: 37.52337 };
+
+        var myLatLng = { lat: 59.9352358, lng: 30.308202 };
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
+            icon: 'img/map-marker.png',
             title: 'Hello World!'
         });
     }
