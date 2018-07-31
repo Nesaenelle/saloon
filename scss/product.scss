@@ -101,6 +101,14 @@
         &>div:first-child {
             border-right: 1px solid #d6d6d6;
         }
+        &_sponsors {
+            width: 150px;
+            position: absolute;
+            right: 180px;
+            img {
+                margin-bottom: 30px;
+            }
+        }
         ul {
             width: 469px;
             li {
