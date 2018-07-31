@@ -423,6 +423,36 @@ function ServicesToggleController() {
 }
 
 
-if (window.jQuery && $('.phone-input').length) {
-    $('.phone-input').mask("+7  (  000  )  000  00  00", { placeholder: "+7  (  ___  )   ___   __   __" });
+if (window.jQuery) {
+
+    if($('.phone-input').length) {
+        $('.phone-input').mask("+7  (  000  )  000  00  00", { placeholder: "+7  (  ___  )   ___   __   __" });
+    }
+    
+    if($('.slick-slider').length) {
+        $('.slick-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+              {
+                breakpoint: 1400,
+                settings: {
+                  slidesToShow: 2
+                }
+              },
+              {
+                breakpoint: 980,
+                settings: {
+                  slidesToShow: 1
+                }
+              }
+            ]
+        });
+    }   
+
+    $('.shop-filter__menu').on('click', function(e){
+        $('.shop-filter__menu').parent().toggleClass('active');
+    });
 }
+
+
