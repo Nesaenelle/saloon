@@ -38,7 +38,7 @@
         <button class="btn btn-transparent-grey mobile" data-modal-btn="online"><span>ОНЛАЙН-ЗАПИСЬ</span></button>
         <ul>
             <li><a href="index.html">Салоны</a></li>
-            <li><a class="active"  href="services.html">Услуги</a></li>
+            <li><a class="active" href="services.html">Услуги</a></li>
             <li><a href="team.html">Команда</a></li>
             <li><a href="vacancy.html">Вакансии</a></li>
             <li><a href="news.html">Новости</a></li>
@@ -51,10 +51,59 @@
             <img src="img/insta.png" alt="">
         </div>
     </div>
-    <main class="home-page">
+    <main class="services-page">
+        <div class="info-page__bg" style="background: url(img/services.png)">
+            <h1>услуги</h1></div>
+        <div class="container">
+            <div class="services-page__addresses">
+                <div class="services-page__addresses_item active">
+                    Вознесенский пр., 1
+                </div>
+                <div class="services-page__addresses_item">
+                    Владимирский пр., 3
+                </div>
+                <div class="services-page__addresses_item">
+                    Невский пр., 57
+                </div>
+            </div>
+        </div>
+        <div class="services-page__list">
+            <div class="services-page__list_item">
+                <div class="services-page__list_item_info">
+                    <div class="services-page__list_item_info_title">HAIR</div>
+                    <div class="services-page__list_item_toggle">посмотреть услуги</div>
+                </div>
+                <div class="services-page__list_item_img"><img src="img/services-1.png" alt=""></div>
+            </div>
+
+            <div class="services-page__list_item">
+                <div class="services-page__list_item_img"><img src="img/services-1.png" alt=""></div>
+                <div class="services-page__list_item_info">
+                    <div class="services-page__list_item_info_title">MAKE-UP & BROW BAR</div>
+                    <div class="services-page__list_item_toggle">посмотреть услуги</div>
+                </div>
+            </div>
+
+            <div class="services-page__list_item">
+                <div class="services-page__list_item_info">
+                    <div class="services-page__list_item_info_title">Косметология</div>
+                    <div class="services-page__list_item_toggle">посмотреть услуги</div>
+                </div>
+                <div class="services-page__list_item_img"><img src="img/services-1.png" alt=""></div>
+            </div>
+
+            <div class="services-page__list_item">
+                <div class="services-page__list_item_img"><img src="img/services-1.png" alt=""></div>
+                <div class="services-page__list_item_info">
+                    <div class="services-page__list_item_info_title">NailS</div>
+                    <div class="services-page__list_item_toggle">посмотреть услуги</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-transparent-grey"><span>посмотреть все услуги</span></button>
     </main>
     <footer class="footer">
-        <div class="footer-top">        
+        <div class="footer-top">
             <button class="btn btn-transparent-grey mobile" data-modal-btn="online"><span>ОНЛАЙН-ЗАПИСЬ</span></button>
             <div class="container">
                 <div class="footer__logo">
@@ -95,7 +144,7 @@
     <div class="modal" data-modal="online">
         <div class="modal-body">
             <div class="modal__close" data-modal-close></div>
-            <div class="modal-left">
+            <div class="modal-left" style="background: url(img/modal.png)">
             </div>
             <div class="modal-right">
                 <div>
@@ -105,10 +154,8 @@
                     <div class="modal-descr">
                         и в числе первых вы будеие узнавать о скидках, новинках, трендах и специальных предложениях.
                     </div>
-                    <form id="sign-in-form" novalidate>
-                        <div class="modal-input">
-                            <input type="text" placeholder="E-mail" required data-pattern="email">
-                        </div>
+                    <form novalidate>
+                        <input type="text" placeholder="E-mail" required data-pattern="email">
                         <button class="btn btn-black"><span>подписаться</span></button>
                         <div class="modal-bottom-text">Подписываясь на рассылку, вы соглашаетесь с <a href="policy.html">политикой конфиденциальности.</a></div>
                     </form>

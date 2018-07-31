@@ -68,18 +68,31 @@
             </div>
         </div>
         <div id="map"></div>
-
-        <div class="form">
-            <div class="">Задайте нам вопрос</div>
-            <form action="">
-                <input type="text" placeholder="Ваше имя">
-                <input type="text" placeholder="E-mail">
-                <input type="text" placeholder="+7 ( )">
-                <textarea placeholder="Ваше имя" placeholder="Ваш вопрос"></textarea>
-                <button class="btn btn-transparent-grey"><span>Отправить</span></button>
-            </form>
+        <div class="question-form">
+            <div class="container">
+                <div class="question-form__title">Задайте нам вопрос</div>
+                <form novalidate>
+                    <div class="question-form__col">
+                        <input type="text" placeholder="Ваше имя" data-pattern="login">
+                        <input type="text" placeholder="E-mail" data-pattern="email">
+                        <input class="phone-input" type="text" placeholder="+7 ( )" data-pattern="phone">
+                    </div>
+                    <div class="question-form__col">
+                        <textarea placeholder="Ваше имя" placeholder="Ваш вопрос"></textarea>
+                        <button class="btn btn-transparent-grey"  type="submit"><span>Отправить</span></button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="form">
+        <div class="subscription-form">
+            <div class="container">
+                <div class="subscription-form__title">подпишитесь
+                    <small>на наши новости</small></div>
+                <form novalidate>
+                    <input type="text" placeholder="E-mail" data-pattern="email">
+                    <button class="btn btn-white" type="submit"><span>подписаться</span></button>
+                </form>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -124,7 +137,7 @@
     <div class="modal" data-modal="online">
         <div class="modal-body">
             <div class="modal__close" data-modal-close></div>
-            <div class="modal-left">
+            <div class="modal-left" style="background: url(img/modal.png)">
             </div>
             <div class="modal-right">
                 <div>
@@ -134,10 +147,8 @@
                     <div class="modal-descr">
                         и в числе первых вы будеие узнавать о скидках, новинках, трендах и специальных предложениях.
                     </div>
-                    <form id="sign-in-form" novalidate>
-                        <div class="modal-input">
-                            <input type="text" placeholder="E-mail" required data-pattern="email">
-                        </div>
+                    <form novalidate>
+                        <input type="text" placeholder="E-mail" required data-pattern="email">
                         <button class="btn btn-black"><span>подписаться</span></button>
                         <div class="modal-bottom-text">Подписываясь на рассылку, вы соглашаетесь с <a href="policy.html">политикой конфиденциальности.</a></div>
                     </form>
@@ -145,9 +156,11 @@
             </div>
         </div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5gs-Kw7zqbPtePvy3DUbZcnWNCpibD0Y&callback=initMap" async defer></script>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/all.js"></script>
-    <script>
+<!--     <script>
     var map;
 
     function initMap() {
@@ -162,7 +175,7 @@
             title: 'Hello World!'
         });
     }
-    </script>
+    </script> -->
 </body>
 
 </html>

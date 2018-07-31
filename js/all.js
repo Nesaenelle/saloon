@@ -1,11 +1,17 @@
 var SharedObj = {
-    forms: new Form(document.querySelector('form')),
+    forms: new FormController(document.querySelectorAll('form')),
     modals: new ModalController(),
     navigation: new NavigationController(),
     menu: new MenuController(),
     HomePageSlider: new HomePageSlider()
 };
 
+
+function FormController(forms) {
+    forms.forEach(function(form) {
+        new Form(form);
+    });
+}
 
 function Form(form) {
     var self = this;
@@ -36,7 +42,6 @@ function Form(form) {
             }, 0);
 
             if (errors === 0) {
-                // SharedObj.modals.openModal('video');
                 SharedObj.modals.closeModal();
                 self.controls.forEach(function(ctrl) {
                     ctrl.input.value = '';
@@ -69,8 +74,9 @@ function Input(input, parent) {
 }
 
 Input.prototype.validate = function() {
-    if (this.input.getAttribute('data-pass-confirm')) {
-        if (this.input.value === this.parent.form.querySelector('[data-pattern="password"]').value) {
+    if (this.input.getAttribute('data-pattern') === 'phone') {
+        var val = this.input.value.replace(/[^0-9]/, '').replace(/ /g,'').replace(/\(/g,'').replace(/\)/g,'');
+        if (this.pattern.test(val)) {
             this.removeError();
         } else {
             this.addError();
@@ -92,8 +98,8 @@ Input.prototype.validate = function() {
 Input.prototype.addError = function() {
     this.input.classList.add('invalid');
     this.input.classList.remove('valid');
-    this.msg.className = 'input-msg invalid';
-    this.msg.innerHTML = 'Enter the correct email';
+    // this.msg.className = 'input-msg invalid';
+    // this.msg.innerHTML = 'Enter the correct email';
     this.input.parentNode.appendChild(this.msg);
     this.valid = false;
 };
@@ -101,16 +107,16 @@ Input.prototype.addError = function() {
 Input.prototype.removeError = function() {
     this.input.classList.add('valid');
     this.input.classList.remove('invalid');
-    this.msg.className = 'input-msg valid';
-    this.msg.innerHTML = 'This is correct email';
-    this.input.parentNode.appendChild(this.msg);
+    // this.msg.className = 'input-msg valid';
+    // this.msg.innerHTML = 'This is correct email';
+    // this.input.parentNode.appendChild(this.msg);
     this.valid = true;
 };
 
 Input.prototype.clear = function() {
     this.input.classList.remove('valid');
     this.input.classList.remove('invalid');
-    this.input.parentNode.removeChild(this.msg);
+    // this.input.parentNode.removeChild(this.msg);
     this.valid = false;
 };
 
@@ -127,6 +133,10 @@ function getPattern(o) {
 
         case 'password':
             pattern = /^(?=.*[a-zA-Z0-9])(?=.*).{7,40}$/;
+            break;
+
+        case 'phone':
+            pattern = /^([0-9]){11,11}$/;
             break;
 
         case 'checkbox':
@@ -323,7 +333,7 @@ function HomePageSlider() {
     var self = this;
     this.slider = document.querySelector('[data-home-page-slider]');
 
-    if(this.slider) {    
+    if (this.slider) {
         this.sliderInner = this.slider.querySelector('[data-home-page-slider-inner]');
         window.addEventListener('resize', function() {
             self.update();
@@ -348,12 +358,12 @@ HomePageSlider.prototype.next = function() {
     if (this.activeIndex > this.slides.length - 1) {
         this.activeIndex = 0;
     }
-    
+
     this.position();
 };
 
 HomePageSlider.prototype.update = function() {
-    if(this.sliderInner) {    
+    if (this.sliderInner) {
         this.sliderInner.style.width = this.slides.length * window.innerWidth + 'px';
 
         this.slides.forEach(function(slide, i) {
@@ -371,3 +381,8 @@ HomePageSlider.prototype.position = function() {
 
 
 SharedObj.HomePageSlider.update();
+
+
+if (window.jQuery) {
+    $('.phone-input').mask("+7  (  000  )  000  00  00", { placeholder: "+7  (  ___  )   ___   __   __" });
+}
