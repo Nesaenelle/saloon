@@ -3,7 +3,8 @@ var SharedObj = {
     modals: new ModalController(),
     navigation: new NavigationController(),
     menu: new MenuController(),
-    HomePageSlider: new HomePageSlider()
+    HomePageSlider: new HomePageSlider(),
+    ServicesToggleController: new ServicesToggleController()
 };
 
 
@@ -75,7 +76,7 @@ function Input(input, parent) {
 
 Input.prototype.validate = function() {
     if (this.input.getAttribute('data-pattern') === 'phone') {
-        var val = this.input.value.replace(/[^0-9]/, '').replace(/ /g,'').replace(/\(/g,'').replace(/\)/g,'');
+        var val = this.input.value.replace(/[^0-9]/, '').replace(/ /g, '').replace(/\(/g, '').replace(/\)/g, '');
         if (this.pattern.test(val)) {
             this.removeError();
         } else {
@@ -383,6 +384,45 @@ HomePageSlider.prototype.position = function() {
 SharedObj.HomePageSlider.update();
 
 
-if (window.jQuery) {
+function ServicesToggleController() {
+    var self = this;
+    this.accoredon = document.querySelector('[data-service-accordeon]');
+    if (this.accoredon) {
+        this.items = this.accoredon.querySelectorAll('[data-service-accordeon-item]');
+        this.items.forEach(function(mainItem) {
+            var details = mainItem.querySelector('[data-service-accordeon-details]');
+            var toggle = mainItem.querySelectorAll('[data-service-accordeon-toggle]');
+            toggle.forEach(function(item) {
+                item.addEventListener('click', function(e) {
+                    if (mainItem.classList.contains('active')) {
+                        mainItem.classList.remove('active');
+                        $(details).slideUp();
+                    } else {
+                        mainItem.classList.add('active');
+                        $(details).slideDown();
+                    }
+                })
+            });
+
+            var childToggle = mainItem.querySelectorAll('[data-service-accordeon-child-toggle]');
+            childToggle.forEach(function(item) {
+                item.addEventListener('click', function(e) {
+                    if (item.classList.contains('active')) {
+                        item.classList.remove('active');
+                        $(item).next().slideUp();
+                    } else {
+                        item.classList.add('active');
+                        $(item).next().slideDown();
+                    }
+                })
+            });
+
+
+        });
+    }
+}
+
+
+if (window.jQuery && $('.phone-input').length) {
     $('.phone-input').mask("+7  (  000  )  000  00  00", { placeholder: "+7  (  ___  )   ___   __   __" });
 }
