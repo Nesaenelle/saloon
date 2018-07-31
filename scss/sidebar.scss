@@ -15,6 +15,36 @@
     &.active {
         left: 0; // opacity: 1;
         visibility: visible;
+
+        ul {
+            li {
+                a {
+                    animation-duration: 1s;
+                    animation-name: slideinUp;
+                }
+                &:nth-child(1) a{
+                    animation-delay: 0.1s;
+                }
+                &:nth-child(2) a{
+                    animation-delay: 0.2s;
+                }
+                &:nth-child(3) a{
+                    animation-delay: 0.3s;
+                }
+                &:nth-child(4) a{
+                    animation-delay: 0.4s;
+                }
+                &:nth-child(5) a{
+                    animation-delay: 0.5s;
+                }
+                &:nth-child(6) a{
+                    animation-delay: 0.6s;
+                }
+                &:nth-child(7) a{
+                    animation-delay: 0.7s;
+                }
+            }
+        }
     }
     &__close {
         position: absolute;
@@ -34,13 +64,20 @@
     }
     ul {
         li {
-            margin-bottom: 85px;
+            // margin-bottom: 85px;
+            overflow: hidden;
+            position: relative;
+            height: 120px;
             a {
                 text-transform: uppercase;
                 font-size: 24px;
                 color: #1d1d1b;
                 font-weight: 300;
-                transition: 0.3s;
+                position: absolute;
+                // transition: 0.3s;
+                opacity: 0;
+                animation-fill-mode: forwards;
+                // position: relative;
                 &.active {
                     font-weight: 600;
                     color: #000;
@@ -51,5 +88,22 @@
                 }
             }
         }
+    }
+}
+
+
+@keyframes slideinUp {
+    from {
+        // transform: translateY(100%);
+        top: 120px;
+        opacity: 0;
+        // visibility: hidden;
+    }
+
+    to {
+        // transform: translateY(0);
+        opacity: 1;
+        top: 0px;
+        // visibility: visible;
     }
 }
