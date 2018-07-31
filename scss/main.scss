@@ -203,11 +203,24 @@ main {
     &__title {
         font-size: 48px;
         text-align: center;
-        padding: 102px 0;
+        margin: 102px 0;
         text-transform: uppercase;
         letter-spacing: 5px;
         font-weight: 600;
-        &__a {}
+        &.crossed {
+            position: relative;
+            &:after {
+                content: '';
+                height: 3px;
+                width: 148px;
+                position: absolute;
+                background: #000;
+                bottom: -20px;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
     }
 }
 
@@ -630,107 +643,9 @@ main {
     }
 }
 
-.shop-page {
-    &__banner {
-        height: 880px;
-        background: url(img/shop-banner.png);
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        background-position: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        position: relative;
-        & >div {
-            position: relative;
-            z-index: 2;
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,.5);
-        }
-        &_title {
-            font-size: 94px;
-            text-align: center;
-            color: #fff;
-            text-transform: uppercase;
-            text-align: center;
-            width: 100%;
-        }
-        &_descr {
-            font-size: 36px;
-            width: 100%;
-            color: #fff;
-            text-transform: uppercase;
-            text-align: center;
-        }
-    }
-}
-
-.shop-filter {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 30px;
-    position: relative;
-    max-width: 1920px;
-    &.active {
-        .shop-filter__dropdown {
-            top: 100px;
-            opacity: 1;
-            visibility: visible;
-        }
-        .shop-filter__menu {
-            img {
-                &:nth-of-type(1) {
-                    display: none;
-                }
-                &:nth-of-type(2) {
-                    display: block;
-                }
-            }
-        }
-    }
-    &__menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        img {
-            &:nth-of-type(2) {
-                display: none;
-            }
-        }
-        span {
-            position: absolute;
-            font-size: 20px;
-            margin-left: 80px;
-            text-transform: uppercase;
-        }
-    }
-    &__backet {}
-    &__dropdown {
-        // display: none;
-        opacity: 0;
-        transition: 0.3s;
-        visibility: hidden;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        padding: 40px 80px;
-        background: #fff;
-        z-index: 12;
-        box-shadow: 0 10px 40px -15px #000;
-    }
-}
 
 .slick-slider {
-    margin: 0 100px;
+    margin: 0 115px;
     &-wrapper {
         position: relative;
         padding: 40px 0;
@@ -761,13 +676,13 @@ main {
         }
     }
     .slick-list.draggable {
-        padding: 20px 0;
+        padding: 62px 0;
     }
     .slick-prev.slick-arrow {
         position: absolute;
         top: 0;
         bottom: 0;
-        left: -50px;
+        left: -64px;
         margin: auto;
         background: url(img/slider-left.png);
         width: 27px;
@@ -786,7 +701,7 @@ main {
         top: 0;
         bottom: 0;
         margin: auto;
-        right: -50px;
+        right: -64px;
         background: url(img/slider-right.png);
         width: 27px;
         height: 50px;
@@ -801,37 +716,6 @@ main {
     }
 }
 
-.product__slider_item {
-    text-align: center;
-    box-shadow: 0 4px 30px -10px #000;
-    margin: 0 20px;
-    padding: 30px 20px 40px 20px;
-    img {
-        display: block;
-        margin: auto;
-        width: 100%;
-        max-width: 400px;
-    }
-    &_name {
-        font-size: 20px;
-        color: #7d7d7d;
-        text-transform: uppercase;
-    }
-    &_title {
-        font-size: 28px;
-        height: 135px;
-    }
-    &_descr {
-        font-size: 20px;
-        color: #7d7d7d;
-    }
-    &_price {
-        font-size: 30px;
-        height: 70px;
-        text-transform: uppercase;
-    }
-    .btn {}
-}
 
 .policy-page {
     padding-top: 82px;
