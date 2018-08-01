@@ -404,7 +404,7 @@ main {
     }
     .slick-prev.slick-arrow {
         position: absolute;
-        top: 40%; // bottom: 0;
+        top: 34%; // bottom: 0;
         left: -64px;
         margin: auto;
         background: url(img/slider-left.png);
@@ -421,7 +421,7 @@ main {
     }
     .slick-next.slick-arrow {
         position: absolute;
-        top: 40%; // bottom: 0;
+        top: 34%; // bottom: 0;
         margin: auto;
         right: -64px;
         background: url(img/slider-right.png);
@@ -442,9 +442,9 @@ main {
 .bottom-btn-arrows {
     position: relative;
     height: 145px;
-    margin-bottom: 84px;
-    padding-top: 33px;
-    margin-top: 100px;
+    margin-bottom: 81px;
+    padding-top: 34px;
+    margin-top: 105px;
     &[data-animate="true"] {
         animation-name: slideinUp;
         animation-duration: 1s;

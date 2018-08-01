@@ -6,9 +6,9 @@
     .info-page__title {
         margin: 102px 0 60px;
     }
-    .container {
-        padding: 0 30px;
-    }
+    // .container {
+    //     padding: 0 30px;
+    // }
     #map {
         height: 700px;
         width: 100%;
@@ -70,11 +70,13 @@
                 }
             }
             &_descr {
-                font-size: 28px;
+                font-size: 26px;
                 color: #7c7c7c;
                 text-align: center;
                 width: 80%;
-                margin: 20px auto 0;
+                margin: 24px auto 0;
+                line-height: 30px;
+                letter-spacing: 0.5px;
             }
             &_title {
                 text-align: center; // padding: 20px;
@@ -258,13 +260,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding: 0 68px;
+            padding: 0 80px;
             &[data-animate="true"] {
                 animation-name: slideinUp;
                 animation-duration: 1s;
             }
             ul {
-                width: calc(50% - 40px);
+                width: calc(50% - 48px);
                 margin-bottom: 30px;
                 li {
                     font-size: 30px;
