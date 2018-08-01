@@ -147,19 +147,52 @@
                 animation-duration: 1s;
             }
             input {
-                padding: 20px 30px 18px 30px;
-                font-size: 28px;
+                padding: 21px 30px 20px;
+                font-size: 26px;
                 margin-bottom: 31px;
                 font-weight: 300;
+                border-color: #b7b7b7;
+                color: #a1a1a1;
+                letter-spacing: 1.4px;
+                &::-webkit-input-placeholder {
+                    color: #a1a1a1;
+                }
+                &::-moz-placeholder {
+                    color: #a1a1a1;
+                }
+                /* Firefox 19+ */
+                &:-moz-placeholder {
+                    color: #a1a1a1;
+                }
+                /* Firefox 18- */
+                &:-ms-input-placeholder {
+                    color: #a1a1a1;
+                }
             }
             textarea {
-                padding: 20px 30px 18px 30px;
+                padding: 21px 30px 20px;
                 font-size: 28px;
                 margin-bottom: 35px;
                 font-weight: 300;
+                border-color: #b7b7b7;
                 height: 194px;
                 letter-spacing: 1.4px;
                 font-size: 26px;
+                color: #a1a1a1;
+                &::-webkit-input-placeholder {
+                    color: #a1a1a1;
+                }
+                &::-moz-placeholder {
+                    color: #a1a1a1;
+                }
+                /* Firefox 19+ */
+                &:-moz-placeholder {
+                    color: #a1a1a1;
+                }
+                /* Firefox 18- */
+                &:-ms-input-placeholder {
+                    color: #a1a1a1;
+                }
             }
         }
         &__col {
@@ -238,7 +271,7 @@
                 left: 0; // right: 0;
                 top: 30px;
                 background: #fff;
-                height: 2px;
+                height: 1px;
                 pointer-events: none;
             }
             &:after {
@@ -249,7 +282,7 @@
                 right: 0; // right: 0;
                 top: 30px;
                 background: #fff;
-                height: 2px;
+                height: 1px;
                 pointer-events: none;
             }
         }
@@ -265,14 +298,14 @@
                 animation-duration: 1s;
             }
             input {
-                padding: 22px 37px 19px;
-                font-size: 26px;
+                padding: 24px 37px 20px 38px;
+                font-size: 24px;
                 margin-bottom: 31px;
                 font-weight: 300;
                 background: 0 0;
                 border-color: #fff;
                 color: #fff;
-                letter-spacing: 0.2px;
+                letter-spacing: 1.2px;
                 &::-webkit-input-placeholder {
                     color: #fff;
                 }

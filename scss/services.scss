@@ -6,13 +6,13 @@
     &__addresses {
         display: flex;
         justify-content: space-between;
-        padding: 95px 0 89px;
+        padding: 98px 0 87px;
         width: 77%;
         margin: auto;
         &_item {
             max-width: 431px;
             width: 100%;
-            padding: 22px 27px 18px;
+            padding: 20px 27px 20px 25px;
             border: 2px solid transparent;
             font-size: 26px;
             text-align: center;
@@ -146,7 +146,7 @@
     &__list {
         max-width: 1920px;
         margin: auto;
-        border-bottom: 1px solid #7c7c7c; // padding-bottom: 60px;
+        // border-bottom: 1px solid #7c7c7c; // padding-bottom: 60px;
         &_item {
             width: 100%;
             flex-wrap: wrap;
