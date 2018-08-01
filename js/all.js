@@ -378,8 +378,16 @@ HomePageSlider.prototype.update = function() {
 };
 
 HomePageSlider.prototype.position = function() {
+    var self = this;
     var offset = -(this.activeIndex * window.innerWidth) + 'px';
     this.sliderInner.style.transform = 'translateX(' + offset + ')';
+    this.slides.forEach(function(item, i) {
+        if (i === self.activeIndex) {
+            item.classList.add('active')
+        } else {
+            item.classList.remove('active');
+        }
+    });
 };
 
 
@@ -471,16 +479,17 @@ function Animate() {
 
     var elements = document.querySelectorAll('[data-animate]');
 
-    setTimeout(function(){
+    setTimeout(function() {
         update();
         window.addEventListener('scroll', function() {
             update();
         });
 
         function update() {
-            elements.forEach(function(elem) {
+            elements.forEach(function(elem) {  console.log(elem);
                 if (isInViewport(elem, 100)) {
-                // if (isScrolledIntoView(elem, 700))  {
+                  
+                    // if (isScrolledIntoView(elem, 700))  {
                     if (!elem.getAttribute('data-animate')) {
                         elem.setAttribute('data-animate', true);
                     }
