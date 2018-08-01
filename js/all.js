@@ -486,9 +486,8 @@ function Animate() {
         });
 
         function update() {
-            elements.forEach(function(elem) {  console.log(elem);
+            elements.forEach(function(elem) {
                 if (isInViewport(elem, 100)) {
-                  
                     // if (isScrolledIntoView(elem, 700))  {
                     if (!elem.getAttribute('data-animate')) {
                         elem.setAttribute('data-animate', true);
