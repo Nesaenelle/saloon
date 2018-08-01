@@ -16,6 +16,15 @@ main {
 
 #map {
     filter: grayscale(100%);
+    &[data-animate="true"] {
+        animation-name: slideinUp;
+        animation-duration: 1s;
+    }
+}
+
+[data-animate] {
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 .title {
@@ -199,6 +208,13 @@ main {
             top: 48px;
             text-align: center;
             line-height: 1.2em;
+            opacity: 0;
+
+            &[data-animate="true"] {
+                animation-name: slideinLeft;
+                animation-duration: 1s;
+                // animation-delay: 0.5s;
+            }
             &:after {
                 content: '';
                 position: absolute;
@@ -230,6 +246,11 @@ main {
         text-transform: uppercase;
         letter-spacing: 5px;
         font-weight: 600;
+        &[data-animate="true"] {
+            animation-name: slideinLeft;
+            animation-duration: 1s;
+            // animation-delay: 0.5s;
+        }
         &.crossed {
             position: relative;
             &:after {
@@ -417,6 +438,10 @@ main {
     text-transform: uppercase;
     position: relative;
     margin: 30px 0;
+    &[data-animate="true"] {
+        animation-name: slideinUp;
+        animation-duration: 1s;
+    }
     h2 {
         width: 832px;
         font-weight: 600;
@@ -442,9 +467,17 @@ main {
 
 .slick-slider {
     margin: 0 115px;
+    &[data-animate="true"] {
+        animation-name: slideinUp;
+        animation-duration: 1s;
+    }
     &-wrapper {
         position: relative;
         padding: 40px 0;
+        &[data-animate="true"] {
+            animation-name: slideinUp;
+            animation-duration: 1s;
+        }
         &_title {
             font-size: 48px;
             text-align: center;
@@ -511,72 +544,6 @@ main {
 }
 
 
-.policy-page {
-    padding-top: 82px;
-    padding-bottom: 90px;
-    .container {}
-    &__title {
-        text-align: center;
-        text-transform: uppercase;
-        position: relative;
-        &.first {
-            margin: 40px auto;
-        }
-        &.second {
-            margin: 100px auto;
-        }
-        &.third {
-            margin: 127px auto 148px;
-            h2 {
-                top: 14px;
-            }
-        }
-        h2 {
-            width: 832px;
-            font-weight: 600;
-            letter-spacing: 3.3px;
-            line-height: 1.4em;
-            font-size: 36px;
-            margin: auto;
-            background: #fff;
-            position: relative;
-            z-index: 1;
-        }
-        &:after {
-            content: '';
-            height: 3px;
-            width: 100%;
-            position: absolute;
-            background: #000;
-            top: 25px;
-            left: 0;
-        }
-    }
-    &__text {
-        width: 65%;
-        margin: 99px auto 0;
-        font-size: 24px;
-        line-height: 30px;
-        font-weight: 300;
-        b {
-            font-weight: 600;
-            display: block;
-            text-align: justify;
-        }
-        &_inner {
-            margin-top: 34px;
-
-            >div {
-                margin-bottom: 6px;
-                line-height: 30px;
-                text-align: justify;
-                &.offset {
-                    margin-bottom: 32px;
-                }
-            }
-        }
-    }
-}
 
 
 .vacancies-page {
@@ -1000,5 +967,48 @@ main {
         width: 357px;
         letter-spacing: 1.7px;
         font-weight: 400;
+    }
+}
+
+
+@keyframes slideinUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes slideinRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes slideinLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 }

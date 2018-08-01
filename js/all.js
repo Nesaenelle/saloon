@@ -5,7 +5,8 @@ var SharedObj = {
     menu: new MenuController(),
     HomePageSlider: new HomePageSlider(),
     ServicesToggleController: new ServicesToggleController(),
-    ProductSlider: new ProductSlider()
+    ProductSlider: new ProductSlider(),
+    Animate: new Animate()
 };
 
 
@@ -453,7 +454,7 @@ function ProductSlider() {
             if (curIndex < 0) {
                 curIndex = items.length - 1;
             }
-            if(curIndex >= items.length) {
+            if (curIndex >= items.length) {
                 curIndex = 0;
             }
             items.forEach(function(item) {
@@ -464,6 +465,28 @@ function ProductSlider() {
             image.src = src;
         }
     }
+}
+
+function Animate() {
+
+    var elements = document.querySelectorAll('[data-animate]');
+
+    setTimeout(function(){
+        update();
+        window.addEventListener('scroll', function() {
+            update();
+        });
+
+        function update() {
+            elements.forEach(function(elem) {
+                if (isInViewport(elem, 300)) {
+                    if (!elem.getAttribute('data-animate')) {
+                        elem.setAttribute('data-animate', true);
+                    }
+                }
+            });
+        }
+    }, 500);
 }
 
 

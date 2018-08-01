@@ -1,0 +1,74 @@
+.policy-page {
+    padding-top: 82px;
+    padding-bottom: 90px;
+    .container {}
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        &[data-animate="true"] {
+            animation-duration: 1s;
+            animation-name: slideinUp;
+        }
+        &.first {
+            margin: 40px auto;
+        }
+        &.second {
+            margin: 100px auto;
+        }
+        &.third {
+            margin: 127px auto 148px;
+            h2 {
+                top: 14px;
+            }
+        }
+        h2 {
+            width: 832px;
+            font-weight: 600;
+            letter-spacing: 3.3px;
+            line-height: 1.4em;
+            font-size: 36px;
+            margin: auto;
+            background: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        &:after {
+            content: '';
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            background: #000;
+            top: 25px;
+            left: 0;
+        }
+    }
+    &__text {
+        width: 65%;
+        margin: 99px auto 0;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 300;
+        &[data-animate="true"] {
+            animation-duration: 1s;
+            animation-name: slideinUp;
+        }
+        b {
+            font-weight: 600;
+            display: block;
+            text-align: justify;
+        }
+        &_inner {
+            margin-top: 34px;
+
+            >div {
+                margin-bottom: 6px;
+                line-height: 30px;
+                text-align: justify;
+                &.offset {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}

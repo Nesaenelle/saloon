@@ -17,11 +17,19 @@
         display: flex;
         justify-content: space-between;
         $c: &;
+        &[data-animate="true"] {
+            animation-name: slideinUp;
+            animation-duration: 1s;
+        }
         &_item {
             width: 49%;
             &_img {
                 overflow: hidden;
                 position: relative;
+                &[data-animate="true"] {
+                    animation-name: slideinUp;
+                    animation-duration: 1s;
+                }
             }
             &_date {
                 text-align: center;
