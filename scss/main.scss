@@ -304,9 +304,11 @@ main {
     }
 }
 
-
 .lazy-load {
     margin: 162px 0;
+    opacity: 0;
+    width: 100%;
+    transition: 0.3s;
     img {
         margin: auto;
         display: block;
@@ -368,7 +370,8 @@ main {
     }
     &-wrapper {
         position: relative;
-        padding: 40px 0;
+        padding: 85px 0;
+        margin: 0 13px;
         &[data-animate="true"] {
             animation-name: slideinUp;
             animation-duration: 1s;
@@ -397,6 +400,9 @@ main {
             border: 4px solid #000;
             left: 0;
             top: 0;
+        }
+        .slick-slider {
+            margin: 0 105px;
         }
     }
     .slick-list.draggable {

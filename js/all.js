@@ -6,7 +6,8 @@ var SharedObj = {
     HomePageSlider: new HomePageSlider(),
     ServicesToggleController: new ServicesToggleController(),
     ProductSlider: new ProductSlider(),
-    Animate: new Animate()
+    Animate: new Animate(),
+    Lazy: new LazyLoad()
 };
 
 
@@ -433,21 +434,18 @@ function ServicesToggleController() {
         });
 
         this.toggleAll.addEventListener('click', function(e) {
-            // this.items.forEach(function(mainItem) {
-            //     var details = mainItem.querySelector('[data-service-accordeon-details]');
-            //     var toggle = mainItem.querySelectorAll('[data-service-accordeon-toggle]');
-            //     toggle.forEach(function(item) {
-            //         item.addEventListener('click', function(e) {
-            //             if (mainItem.classList.contains('active')) {
-            //                 mainItem.classList.remove('active');
-            //                 $(details).slideUp();
-            //             } else {
-            //                 mainItem.classList.add('active');
-            //                 $(details).slideDown();
-            //             }
-            //         })
-            //     });
-            // });
+            self.items.forEach(function(mainItem) {
+                var details = mainItem.querySelector('[data-service-accordeon-details]');
+                var toggle = mainItem.querySelectorAll('[data-service-accordeon-toggle]');
+                if (!toggleAllStatus) {
+                    mainItem.classList.add('active');
+                    $(details).slideDown();
+                } else {
+                    mainItem.classList.remove('active');
+                    $(details).slideUp();
+                }
+            });
+            toggleAllStatus = !toggleAllStatus;
         });
     }
 }
@@ -516,6 +514,44 @@ function Animate() {
             });
         }
     }, 500);
+}
+
+function LazyLoad() {
+    var elem = document.querySelector('[data-lazy-load]');
+    var loader = document.querySelector('[data-lazy-load-loader]');
+    var isLoading = false;
+    var self = this;
+    var timer;
+    var count = 0;
+
+    if(elem) {    
+        window.addEventListener('scroll', function() {
+            if (count < 3 && isInViewport(loader, 200) && !timer) {
+                loader.style.opacity = 1;
+                count++;
+                timer = setTimeout(function() {
+                    var source = document.getElementById("entry-template").innerHTML;
+                    var template = Handlebars.compile(source);
+                    var item = document.createElement('div');
+
+                    for (var i = 0; i < 3; i++) {
+                        elem.appendChild(item);
+                        item.outerHTML = template();
+                    }
+
+                    loader.style.opacity = 0;
+                    clearTimeout(timer);
+                    timer = undefined;
+
+                    if(count === 3) {
+                        loader.style.display = 'none';
+                    }
+                }, 500);
+            }
+
+
+        }, false);
+    }
 }
 
 

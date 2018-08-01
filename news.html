@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="info-page__title">все новости</div>
-            <div class="news-page__list news-page__list_all" data-animate>
+            <div class="news-page__list news-page__list_all" data-animate data-lazy-load>
                 <div class="news-page__list_item">
                     <div class="news-page__list_item_img" data-animate><img src="img/news-regular-1.jpg" alt=""></div>
                     <div class="news-page__list_item_date"> 19 мая</div>
@@ -90,7 +90,7 @@
                     <div class="news-page__list_item_title"><a href="news_inside.html">обновленная студия <br>в Four Seasons</a></div>
                 </div>
             </div>
-            <div class="lazy-load"><img src="img/lazy.png" alt="" class="rotating"></div>
+            <div class="lazy-load" data-lazy-load-loader><img src="img/lazy.png" alt="" class="rotating"></div>
         </div>
     </main>
     <footer class="footer">
@@ -152,6 +152,18 @@
             </div>
         </div>
     </div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div class="news-page__list_item">
+            <div class="news-page__list_item_img" data-animate="true"><img src="img/news-regular-3.jpg" alt=""></div>
+            <div class="news-page__list_item_date"> 3 мая</div>
+            <div class="news-page__list_item_title"><a href="news_inside.html">обновленная студия <br>в Four Seasons</a></div>
+        </div>
+    </script>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/handlebars-v4.0.11.js"></script>
     <script src="js/all.js"></script>
 </body>
 

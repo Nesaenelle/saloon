@@ -103,10 +103,21 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        opacity: 1;
+        &[data-animate="true"] {
+            .team-page__list_item {
+                animation-name: slideinUp;
+                animation-duration: 1s;
+            }
+        }
+
         &_item {
             width: calc(100%/3 - 25px);
             background: #f4f4f4;
             margin-bottom: 30px;
+            animation-fill-mode: forwards;
+            opacity: 0;
             &[data-animate="true"] {
                 animation-name: slideinUp;
                 animation-duration: 1s;

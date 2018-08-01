@@ -64,43 +64,43 @@
                     </div>
                 </div>
             </div>
-            <div class="team-page__list">
-                <div class="team-page__list_item" data-animate>
+            <div class="team-page__list"  data-animate data-lazy-load>
+                <div class="team-page__list_item">
                     <div class="team-page__list_item_img"><img src="img/team-2.jpg" alt=""></div>
                     <div class="team-page__list_item_info" data-animate>
                         <div class="team-page__list_item_name">Ирина Андерсон</div>
                         <div class="team-page__list_item_position">Основатель и идеолог студии</div>
                     </div>
                 </div>
-                <div class="team-page__list_item" data-animate>
+                <div class="team-page__list_item">
                     <div class="team-page__list_item_img"><img src="img/team-3.jpg" alt=""></div>
                     <div class="team-page__list_item_info" data-animate>
                         <div class="team-page__list_item_name">Евгения петрушенко</div>
                         <div class="team-page__list_item_position">менеджер по работе <br>с клиентами</div>
                     </div>
                 </div>
-                <div class="team-page__list_item" data-animate>
+                <div class="team-page__list_item">
                     <div class="team-page__list_item_img"><img src="img/team-4.jpg" alt=""></div>
                     <div class="team-page__list_item_info" data-animate>
                         <div class="team-page__list_item_name">Анастасия Зубова</div>
                         <div class="team-page__list_item_position">PR manager <br>Hair by Irina Anderson</div>
                     </div>
                 </div>
-                <div class="team-page__list_item" data-animate>
+                <div class="team-page__list_item">
                     <div class="team-page__list_item_img"><img src="img/team-5.jpg" alt=""></div>
                     <div class="team-page__list_item_info" data-animate>
                         <div class="team-page__list_item_name">Ирина Андерсон</div>
                         <div class="team-page__list_item_position">Основатель и идеолог студии</div>
                     </div>
                 </div>
-                <div class="team-page__list_item" data-animate>
+                <div class="team-page__list_item">
                     <div class="team-page__list_item_img"><img src="img/team-6.jpg" alt=""></div>
                     <div class="team-page__list_item_info" data-animate>
                         <div class="team-page__list_item_name">Евгения петрушенко</div>
                         <div class="team-page__list_item_position">менеджер по работе <br>с клиентами</div>
                     </div>
                 </div>
-                <div class="team-page__list_item" data-animate>
+                <div class="team-page__list_item">
                     <div class="team-page__list_item_img"><img src="img/team-7.jpg" alt=""></div>
                     <div class="team-page__list_item_info" data-animate>
                         <div class="team-page__list_item_name">Анастасия Зубова</div>
@@ -108,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lazy-load"><img src="img/lazy.png" alt="" class="rotating"></div>
+            <div class="lazy-load" data-lazy-load-loader><img src="img/lazy.png" alt="" class="rotating"></div>
         </div>
     </main>
     <footer class="footer">
@@ -170,6 +170,19 @@
             </div>
         </div>
     </div>
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div class="team-page__list_item">
+            <div class="team-page__list_item_img"><img src="img/team-7.jpg" alt=""></div>
+            <div class="team-page__list_item_info" data-animate="true">
+                <div class="team-page__list_item_name">Анастасия Зубова</div>
+                <div class="team-page__list_item_position">PR manager <br>Hair by Irina Anderson</div>
+            </div>
+        </div>
+    </script>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/handlebars-v4.0.11.js"></script>
     <script src="js/all.js"></script>
 </body>
 
