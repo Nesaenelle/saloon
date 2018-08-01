@@ -41,6 +41,10 @@
         width: 91%;
         margin: 89px auto;
         border: 1px solid #ccc;
+        &[data-animate="true"] {
+            animation-duration: 1s;
+            animation-name: slideinLeft;
+        }
     }
     &__list {
         display: flex;
