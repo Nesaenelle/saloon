@@ -17,12 +17,31 @@
         display: flex;
         justify-content: space-between;
         $c: &;
+        // &[data-animate="true"] {
+        //     // animation-name: slideinUp;
+        //     // animation-duration: 1s;
+
+        // }
+        opacity: 1;
         &[data-animate="true"] {
-            animation-name: slideinUp;
-            animation-duration: 1s;
+            .news-page__list_item {
+                animation-name: slideinUp;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                &:nth-child(1) {
+                    animation-delay: 0s;
+                }
+                &:nth-child(2) {
+                    animation-delay: 0.3s;
+                }
+                &:nth-child(3) {
+                    animation-delay: 0.6s;
+                }
+            }
         }
         &_item {
             width: 49%;
+            opacity: 0;
             &_img {
                 overflow: hidden;
                 position: relative;
@@ -204,6 +223,10 @@
             letter-spacing: 2.4px;
             font-weight: 600;
             position: relative;
+            &[data-animate="true"] {
+                animation-name: slideinUp;
+                animation-duration: 1s;
+            }
             &:after {
                 position: absolute;
                 content: '';
@@ -225,6 +248,10 @@
             width: 70%;
             line-height: 49px;
             font-weight: 600;
+            &[data-animate="true"] {
+                animation-name: slideinUp;
+                animation-duration: 1s;
+            }
         }
 
         &__list {
@@ -232,6 +259,10 @@
             flex-wrap: wrap;
             justify-content: space-between;
             padding: 0 68px;
+            &[data-animate="true"] {
+                animation-name: slideinUp;
+                animation-duration: 1s;
+            }
             ul {
                 width: calc(50% - 40px);
                 margin-bottom: 30px;
@@ -255,10 +286,18 @@
             letter-spacing: 1.6px;
             padding: 17px 27px 11px 29px;
             width: 304px;
+            &[data-animate="true"] {
+                animation-name: slideinUp;
+                animation-duration: 1s;
+            }
         }
 
         &__address {
             margin-bottom: 168px;
+            &[data-animate="true"] {
+                animation-name: slideinUp;
+                animation-duration: 1s;
+            }
             &_title {
                 font-size: 36px;
                 text-align: center;

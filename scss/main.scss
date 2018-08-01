@@ -237,6 +237,11 @@ main {
             font-size: 36px;
             letter-spacing: 4px;
             text-transform: uppercase;
+            &[data-animate="true"] {
+                animation-name: slideinLeft;
+                animation-duration: 1s;
+                animation-delay: 0.5s;
+            }
         }
     }
     &__title {
@@ -291,147 +296,6 @@ main {
     animation: rotating 2s linear infinite;
 }
 
-
-
-
-
-.team-page {
-    &__main {
-        padding: 44px 0 41px 0;
-        display: flex;
-
-        &_bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url(img/team-1.jpg);
-            background-size: cover;
-            background-position: center;
-            transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
-            &:hover {
-                transform: scale(1.05);
-            }
-        }
-        &__left {
-            width: 49.5%;
-            font-size: 0;
-
-            height: 618px;
-            overflow: hidden;
-            position: relative;
-            &:after {
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-                width: 0;
-                height: 0;
-                border-top: 14px solid transparent;
-                border-bottom: 14px solid transparent;
-
-                border-right: 14px solid #f4f4f4;
-            } // img {
-            //     width: 100%;
-            // }
-            // background: #f4f4f4;
-        }
-        &__right {
-            background: #f4f4f4;
-            width: 50.5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            &>div {
-                position: relative;
-                top: -11px;
-            }
-        }
-        &_name {
-            width: 100%;
-            text-align: center;
-            font-size: 36px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            position: relative;
-            &:after {
-                position: absolute;
-                content: '';
-                width: 106px;
-                margin: auto;
-                left: 0;
-                right: 0;
-                bottom: -22px;
-                background: #000;
-                height: 1px;
-            }
-        }
-        &_position {
-            text-transform: uppercase;
-            width: 100%;
-            color: #7d7d7d;
-            margin-top: 48px;
-            font-weight: 300;
-            font-size: 30px;
-            letter-spacing: 2.2px;
-        }
-    }
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        &_item {
-            width: calc(100%/3 - 25px);
-            background: #f4f4f4;
-            margin-bottom: 30px;
-            &_img {
-                overflow: hidden;
-                font-size: 0;
-                &:hover {
-                    img {
-                        transform: scale(1.05);
-                    }
-                }
-                img {
-                    width: 100%;
-                    transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
-                }
-            }
-            &_info {
-                padding: 85px 0 82px 0;
-            }
-            &_name {
-                text-align: center;
-                font-size: 30px;
-                text-transform: uppercase;
-                position: relative;
-                letter-spacing: 2.2px;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 100px;
-                    height: 1px;
-                    bottom: -29px;
-                    background: #000;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                }
-            }
-            &_position {
-                margin-top: 62px;
-                text-align: center;
-                font-size: 20px;
-                text-transform: uppercase;
-                color: #7d7d7d;
-                letter-spacing: 1.5px;
-                font-weight: 300;
-            }
-        }
-    }
-}
 
 .crossed-title {
     text-align: center;
@@ -544,140 +408,6 @@ main {
 }
 
 
-
-
-.vacancies-page {
-    padding-bottom: 73px;
-    .container {}
-    .btn-black {
-        font-size: 20px;
-        padding: 18px 41px;
-        letter-spacing: 1.6px;
-    }
-    &__list {
-        margin: 0 auto 0;
-        padding-bottom: 112px;
-        &_item {
-            .container {
-                padding: 0;
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            &:nth-child(odd) {
-                .container {
-                    padding: 124px 117px 140px 165px;
-                }
-            }
-            &:nth-child(even) {
-                background: #f4f4f4;
-                .container {
-                    padding: 70px 117px 105px 165px;
-                }
-            }
-            &:first-child {
-                .container {
-                    padding: 94px 117px 140px 165px;
-                }
-            }
-            &:last-child {
-                .container {
-                    padding-bottom: 0;
-                }
-            }
-            ul {
-                width: 752px;
-                margin-top: 72px;
-                &:nth-of-type(2) {
-                    li:first-child {
-                        margin-bottom: 28px;
-                    }
-                }
-                &.inactive {
-                    margin-top: -63px;
-                    li {
-                        margin-bottom: 0px;
-                        &:before {
-                            content: none;
-                        }
-                    }
-                }
-                li {
-                    &:first-child {
-                        font-size: 24px;
-                        padding-left: 0;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        letter-spacing: 2.5px;
-                        margin-bottom: 20px;
-                        &:before {
-                            content: none;
-                        }
-                    }
-                    font-size: 24px;
-                    padding-left: 62px;
-                    position: relative;
-                    margin-bottom: 11px;
-                    line-height: 30px;
-                    padding-right: 147px;
-                    &:before {
-                        content: '';
-                        width: 10px;
-                        height: 10px;
-                        position: absolute;
-                        left: 22px;
-                        background: #000;
-                        top: 8px;
-                    }
-                    &.active {
-                        font-weight: 600;
-                    }
-                }
-            }
-            &_title {
-                font-size: 48px;
-                width: 100%;
-                text-transform: uppercase;
-                font-weight: 600;
-                letter-spacing: 5px;
-                position: relative;
-                margin-bottom: 0px;
-                height: 122px;
-                small {
-                    display: block;
-                    font-size: 30px;
-                    font-weight: 400;
-                    letter-spacing: 3px;
-                    line-height: 24px;
-                }
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 1px;
-                    bottom: 0px;
-                    background: #000;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                }
-            }
-            &_descr {
-                font-size: 30px;
-                margin-top: 68px;
-                letter-spacing: 0.7px;
-                font-weight: 300;
-                width: 100%;
-                line-height: 36px;
-                padding-right: 288px;
-                $c: &;
-                &+.vacancies-page__list_item_descr {
-                    margin-top: 36px;
-                }
-            }
-        }
-    }
-}
 
 .services-page {
     .btn {
@@ -932,6 +662,10 @@ main {
     margin-bottom: 84px;
     padding-top: 33px;
     margin-top: 100px;
+    &[data-animate="true"] {
+        animation-name: slideinUp;
+        animation-duration: 1s;
+    }
     &__left {
         width: 277px;
         height: 145px;
@@ -973,7 +707,7 @@ main {
 
 @keyframes slideinUp {
     from {
-        transform: translateY(100%);
+        transform: translateY(400px);
         opacity: 0;
         visibility: hidden;
     }

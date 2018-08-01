@@ -217,7 +217,7 @@ function isScrolledIntoView(elem, offsetVal) {
     return docViewTop >= elemTop - (offsetVal || 200) /*- window.innerHeight*/ ; // /((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 };
 
-function isInViewport(el) {
+function isInViewport(el, offset) {
     var top = el.offsetTop;
     var left = el.offsetLeft;
     var width = el.offsetWidth;
@@ -230,7 +230,7 @@ function isInViewport(el) {
     }
 
     return (
-        top < (window.pageYOffset + window.innerHeight) &&
+        top < (window.pageYOffset + window.innerHeight - offset || 0) &&
         left < (window.pageXOffset + window.innerWidth) &&
         (top + height) > window.pageYOffset &&
         (left + width) > window.pageXOffset
@@ -479,7 +479,8 @@ function Animate() {
 
         function update() {
             elements.forEach(function(elem) {
-                if (isInViewport(elem, 300)) {
+                if (isInViewport(elem, 100)) {
+                // if (isScrolledIntoView(elem, 700))  {
                     if (!elem.getAttribute('data-animate')) {
                         elem.setAttribute('data-animate', true);
                     }
