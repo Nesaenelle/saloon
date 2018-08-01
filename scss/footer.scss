@@ -1,6 +1,5 @@
 .footer {
     // height: 417px;
-
     .btn {
         display: none;
     }
@@ -49,19 +48,7 @@
             }
         }
     }
-    &__socials {
-        display: flex;
-        width: calc(100%/3);
-        justify-content: flex-end;
-        align-items: flex-end;
-        min-height: 100%;
-        padding-right: 14px;
-        font-size: 0;
-        padding-bottom: 5px;
-        img {
-            margin-left: 25px;
-        }
-    }
+
     &-bottom {
         background: #1d1d1b;
         height: $footer-bottom-height;
@@ -84,6 +71,74 @@
             text-transform: uppercase;
             letter-spacing: 1.1px;
             padding-right: 14px;
+        }
+    }
+
+    .socials-block {
+        width: calc(100%/3);
+        justify-content: flex-end;
+    }
+}
+
+.socials-block {
+    display: flex;
+
+    align-items: flex-end;
+    min-height: 100%;
+    padding-right: 14px;
+    font-size: 0;
+    padding-bottom: 5px;
+    a {
+        display: block;
+        border: 3px solid #bfbebf;
+        margin-left: 25px;
+        width: 54px;
+        min-width: 54px;
+        height: 54px;
+        position: relative;
+        &:hover {
+            img {
+                &:first-child {
+                    top: -50px;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &:last-child {
+                    top: 12px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                &.vk {
+                    &:last-child {
+                        top: 9px;
+                    }
+                }
+            }
+        }
+        img {
+            width: 23px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            transition: 0.3s;
+            &:first-child {
+                top: 12px;
+                opacity: 1;
+                visibility: visible;
+            }
+            &:last-child {
+                top: 50px;
+                opacity: 0;
+                visibility: hidden;
+            }
+            &.vk {
+                width: 29px;
+                top: 9px;
+                &:last-child {
+                    top: 50px;
+                }
+            }
         }
     }
 }
