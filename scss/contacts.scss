@@ -54,20 +54,31 @@
             &:nth-child(4) {
                 margin-bottom: 18px;
             }
-            &[data-animate="true"] {
-                opacity: 1;
-
-                .contacts-page__list_item_marker, .contacts-page__list_item_address, .contacts-page__list_item_place, .contacts-page__list_item_phone {
+            &:nth-child(odd) {
+                &[data-animate="true"] {
                     animation-name: slideinUp;
                     animation-duration: 1s;
+                    .contacts-page__list_item_img {
+                        animation-name: slideinUp;
+                        animation-duration: 1s;
+                        animation-delay: 0.5s;
+                    }
                 }
-
-                .contacts-page__list_item_img {
+            }
+            &:nth-child(even) {
+                &[data-animate="true"] {
                     animation-name: slideinUp;
                     animation-duration: 1s;
                     animation-delay: 0.5s;
+                    .contacts-page__list_item_img {
+                        animation-name: slideinUp;
+                        animation-duration: 1s;
+                        animation-delay: 1s;
+                    }
                 }
+
             }
+
             &_address {
                 font-size: 24px;
                 color: #2d2528;
@@ -272,7 +283,6 @@
                 &:-ms-input-placeholder {
                     color: #fff;
                 }
-
             }
         }
         .btn {
