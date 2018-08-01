@@ -24,82 +24,130 @@
         margin: 0 25px;
         padding: 30px 40px 40px 40px;
         background-color: #fff;
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2); // overflow: auto;
-        // max-height: 90%;
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
     }
-    &[data-modal="online"],
-    &[data-modal="team"] {
+
+    &[data-modal="online"] {
         .modal-body {
             display: flex;
             padding: 0;
             width: 1428px;
-            height: 721px;
+            height: 790px;
+
             .modal-left {
                 background-size: cover!important;
             }
+
             .modal-right {
-                padding: 40px 50px;
-                display: flex;
-                align-items: center;
+                padding: 89px 60px 86px 60px;
             }
+
             .modal-title {
                 font-size: 36px;
                 color: #000;
                 text-align: center;
-                width: 50%;
-                margin: auto;
-                line-height: 1.5em;
-                margin-bottom: 27px;
+                width: 60%;
+                margin: auto auto 27px;
+                line-height: 1.35em;
                 text-transform: uppercase;
+                position: relative;
+                letter-spacing: 2.6px;
+                &:after {
+                    content: '';
+                    height: 3px;
+                    width: 46%;
+                    position: absolute;
+                    background: #000;
+                    bottom: -42px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
             }
             .btn {
-                margin: 30px auto;
+                margin: 30px auto 42px;
+                width: 307px;
+                padding: 17px 20px 12px 20px;
+                letter-spacing: 2px;
             }
             form {
-                input {              
-                    max-width: 614px;
-                    margin: 60px 0 45px 0;
+                margin: 72px 0 0 0;
+                padding: 0 32px;
+                input {
+                    border-color: #000;
+                    padding: 20px 33px 19px 33px;
+                    width: 100%;
+                    color: #000;
+                    &::-webkit-input-placeholder {
+                        color: #000;
+                    }
+                    &::-moz-placeholder {
+                        color: #000;
+                    }
+                    /* Firefox 19+ */
+                    &:-moz-placeholder {
+                        color: #000;
+                    }
+                    /* Firefox 18- */
+                    &:-ms-input-placeholder {
+                        color: #000;
+                    }
                 }
             }
             .modal-descr {
                 font-size: 24px;
                 color: #7d7d7d;
                 text-align: center;
-                width: 84%;
+                width: 100%;
                 text-transform: uppercase;
-                margin: auto;
+                margin: 83px auto 0;
                 font-weight: 300;
+                letter-spacing: 1.2px;
+                line-height: 1.7em;
             }
         }
     }
 
     &[data-modal="team"] {
         .modal-body {
-            height: 785px;
+            height: 790px;
+            width: 1425px;
+            display: flex;
+            padding: 0;
             .modal-left {
-                width: 40%;
+                width: 41%;
+                background-size: cover!important;
             }
             .modal-right {
-                width: 60%;
-                padding: 0;
-                flex-wrap: wrap;
-                align-items: flex-end;
+                width: 61%;
+                padding: 0; // flex-wrap: wrap;
+                // align-items: flex-end;
                 >div:first-child {
                     width: 80%;
                     margin: auto;
                 }
             }
             .modal-title {
+                font-size: 36px;
+                color: #000;
+                text-align: center;
                 width: 100%;
-                margin-bottom: 0;
-                margin-top: 36px;
-                font-size: 38px;
-                letter-spacing: 1.4px;
-                line-height: 48px;
+                margin: 40px auto 0;
+                line-height: 1.35em;
+                text-transform: uppercase;
+                position: relative;
+                letter-spacing: 2.6px;
             }
             .modal-descr {
-                font-size: 20px;
-                margin-bottom: 80px;
+                font-size: 18px;
+                color: #7d7d7d;
+                text-align: center;
+                width: 100%;
+                text-transform: uppercase;
+                margin: 3px auto 0;
+                font-weight: 300;
+                letter-spacing: 1.3px;
+                line-height: 1.7em;
                 position: relative;
                 &:after {
                     content: '';
@@ -114,17 +162,34 @@
                 }
             }
             form {
-                width: 80%;
-                margin: auto;
+                width: 78%;
+                margin: 86px auto 20px;
                 .btn {
-                    margin: 30px auto;
-                    padding: 14px 69px;
+                    margin: 30px auto 42px;
+                    width: 307px;
+                    padding: 17px 20px 12px 20px;
                     letter-spacing: 2px;
-                    font-size: 24px;
-                    font-weight: 600;
                 }
                 input {
-                    margin: 0 0 15px 0;
+                    margin: 0 0 12px 0;
+                    border-color: #d3d3d3;
+                    padding: 20px 33px 19px 33px;
+                    width: 100%;
+                    color: #7c7c7c;
+                    &::-webkit-input-placeholder {
+                        color: #7c7c7c;
+                    }
+                    &::-moz-placeholder {
+                        color: #7c7c7c;
+                    }
+                    /* Firefox 19+ */
+                    &:-moz-placeholder {
+                        color: #7c7c7c;
+                    }
+                    /* Firefox 18- */
+                    &:-ms-input-placeholder {
+                        color: #7c7c7c;
+                    }
                 }
             }
             .modal-bottom-text {
@@ -134,6 +199,9 @@
                 position: relative;
                 text-align: center;
                 width: 80%;
+                letter-spacing: 1.6px;
+                margin-top: 76px;
+                line-height: 29px;
                 span {
                     position: relative;
                     background: #fff;
@@ -150,21 +218,32 @@
                     width: 100%;
                     position: absolute;
                     background: #000;
-                    top: 14px;
+                    top: 11px;
                     left: 0;
                 }
             }
             .modal-socials {
-                height: 70px;
+                height: 68px;
                 display: flex;
                 width: 100%;
+                margin-top: 35px;
                 &__item {
                     width: 50%;
                     &:first-child {
                         background: #161eb1;
+                        img {
+                            position: relative;
+                            top: -4px;
+                            left: -12px;
+                        }
                     }
                     &:last-child {
                         background: #4d42ff;
+                        img {
+                            position: relative;
+                            top: 0px;
+                            left: 12px;
+                        }
                     }
                     a {
                         display: block;
@@ -190,8 +269,8 @@
         background: url(img/close.png) no-repeat;
         background-size: cover;
         position: absolute;
-        right: -55px;
-        top: -20px;
+        right: -51px;
+        top: -15px;
         cursor: pointer;
         width: 30px;
         height: 30px;

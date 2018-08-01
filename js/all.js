@@ -183,7 +183,7 @@ function ModalController() {
 
     window.addEventListener('click', function(e) {
         if (self.activeModal && !self.activeModal.querySelector('.modal-body').contains(e.target)) {
-            self.closeModal();
+            // self.closeModal();
         }
     }, false);
 }
