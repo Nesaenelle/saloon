@@ -51,6 +51,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            padding: 0 20px;
             &[data-animate="true"] {
                 animation-name: slideinRight;
                 animation-duration: 1s; // animation-delay: 0.5s;
@@ -92,6 +93,7 @@
             font-weight: 300;
             font-size: 30px;
             letter-spacing: 2.2px;
+              text-align: center;
             &[data-animate="true"] {
                 animation-name: slideinRight;
                 animation-duration: 1s;
@@ -146,7 +148,7 @@
                 }
             }
             &_info {
-                padding: 85px 0 82px 0;
+                padding: 85px 20px 82px 20px;
                 &[data-animate="true"] {
                     animation-name: slideinUp;
                     animation-duration: 1s;

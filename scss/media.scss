@@ -20,6 +20,11 @@
     }
 }
 
+@media screen and (max-width: 1440px) { 
+    .header__right .btn {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 1280px) {
     .footer__list ul,
@@ -71,11 +76,27 @@
         font-size: 20px;
         width: 100%;
     }
+
+
+    .policy-page__text {
+        width: 100%;
+    }
+
+    .policy-page__title h2 {
+        font-size: 28px;
+        padding: 0 80px;
+    }
 }
 
 @media screen and (max-width: 980px) {
-    main {
-        min-height: calc(100% - 100px - $footer-top-height - $footer-bottom-height);
+    // main {
+    //     min-height: calc(100% - 100px - $footer-top-height - $footer-bottom-height);
+    // }
+    .info-page__bg h1 {
+        font-size: 60px;
+    }
+    .info-page__bg {
+        height: 551px;
     }
     .home-page__item {
         height: calc(100vh - 100px);
@@ -91,7 +112,7 @@
         width: 55px;
     }
 
-    .header .hamburger span{
+    .header .hamburger span {
         height: 2px!important;
     }
 
@@ -162,6 +183,7 @@
             margin-top: 50px;
             li {
                 margin-bottom: 45px;
+                height: 50px;
             }
         }
         .btn {
@@ -180,11 +202,24 @@
         &__logo {
             width: 100%;
             text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #e3e2e3;
+            padding-top: 30px;
+            img {
+                padding-right: 0;
+                &:first-child {
+                    display: none;
+                }
+                &:last-child {
+                    display: block;
+                    margin: auto;
+                }
+            }
         }
         &__list {
             display: none;
         }
-        &__socials {
+        .socials-block {
             justify-content: center;
             width: 100%;
         }
@@ -203,6 +238,61 @@
     .modal[data-modal=online] .modal-body .modal-input {
         margin: 30px auto 20px;
     }
+
+
+    .policy-page__title h2 {
+        font-size: 24px;
+        padding: 0 30px;
+    }
+
+    .policy-page__text {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .team-page {
+        .container {
+            padding: 0;
+        }
+        .team-page__main {
+            flex-wrap: wrap;
+            &__left {
+                width: 100%;
+                height: 437px;
+                &:after {
+                    border-left: 30px solid transparent;
+                    border-right: 30px solid transparent;
+                    border-bottom: 30px solid #f4f4f4;
+                    bottom: 0;
+                    top: auto;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &__right {
+                width: 100%;
+                height: 437px;
+            }
+            &_position {
+                width: 60%;
+                margin: 90px auto 0;
+            }
+        }
+        &__list {
+            padding: 0 25px;
+            &_item {
+                width: 100%;
+                max-width: 578px;
+                margin: 0 auto 30px;
+                &:nth-child(3n+1),
+                &:nth-child(3n+2),
+                &:nth-child(3n+3) {
+                    animation-delay: 0s;
+                }
+                &_img {}
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -211,10 +301,45 @@
         font-size: 56px;
     }
 
-    .sidebar { 
+    .sidebar {
+        padding: 50px 10% 50px 10%;
         .btn {
             min-width: 230px;
+            margin-top: 60px;
+            padding: 20px 20px 14px 20px;
         }
+        ul {
+            li {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+    .policy-page {
+        padding-top: 30px;
+    }
+    .policy-page__title {
+        margin: 50px 0!important;
+        h2 {
+            padding: 0;
+            word-break: break-word;
+            font-size: 20px;
+            position: static;
+            br {
+                display: none;
+            }
+        }
+        &:after {
+            content: none;
+        }
+    }
+    .policy-page__text {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+    .team-page .team-page__main_position {
+        width: 100%;
     }
 }
 
@@ -224,5 +349,22 @@
         &__socials {
             display: none;
         }
+    }
+
+    .team-page__list_item_info {
+        padding: 50px 20px;
+    }
+    .team-page__main_name {
+        font-size: 28px;
+    }
+    .team-page__list_item_name,
+    {
+        font-size: 24px;
+    }
+    .team-page__list_item_position {
+        font-size: 16px;
+    }
+    .team-page__main_position {
+        font-size: 20px;
     }
 }
