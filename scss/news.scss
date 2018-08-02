@@ -133,20 +133,20 @@
             &_popular {
                 // margin-bottom: 105px;
                 .news-page__list_item {
-                    padding-bottom: 109px;
+                    padding-bottom: 30px;
                     &_date {
-                        margin-top: 50px;
+                        margin-top: 38px;
                         font-size: 32px;
                         letter-spacing: 1px;
                     }
                     &_title {
                         font-size: 36px;
                         margin-top: 59px;
-                        letter-spacing: 2.3px;
+                        letter-spacing: 2.8px;
                         line-height: 1.2em;
                     }
                     &_img {
-                        height: 538px;
+                        height: 552px;
                         position: relative;
                         font-size: 0; // &:after {
                         //     transition: 0.3s;
