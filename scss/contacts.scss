@@ -290,7 +290,7 @@
             padding: 47px 0;
             margin: auto;
             display: block;
-            width: 682px;
+            max-width: 682px;
             text-align: center;
             position: relative;
             &[data-animate="true"] {
