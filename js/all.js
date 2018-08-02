@@ -7,7 +7,8 @@ var SharedObj = {
     ServicesToggleController: new ServicesToggleController(),
     ProductSlider: new ProductSlider(),
     Animate: new Animate(),
-    Lazy: new LazyLoad()
+    Lazy: new LazyLoad(),
+    Tabs: new Tabs()
 };
 
 
@@ -552,6 +553,25 @@ function LazyLoad() {
 
         }, false);
     }
+}
+
+function Tabs() {
+    var tabs = document.querySelectorAll('[data-tabs]');
+
+    tabs.forEach(function(context){
+        var items =  context.querySelectorAll('[data-tabs-item]');
+        var contents = context.querySelectorAll('[data-tabs-content]');
+        items.forEach(function(tab){
+            tab.addEventListener('click', function(e) {
+                items.forEach(function(a){ a.classList.remove('active') });
+                tab.classList.add('active');
+                var id = e.currentTarget.getAttribute('data-tabs-item');
+                var content = context.querySelector('[data-tabs-content="' + id + '"]');
+                contents.forEach(function(a) {a.classList.remove('active')});
+                content.classList.add('active');
+            });
+        });
+    });
 }
 
 
