@@ -216,7 +216,10 @@ main {
             h1 {
                 font-size: 64px;
                 margin-top: 56px;
-                letter-spacing: 6px;
+                letter-spacing: 7.1px;
+                &:after {
+                    top: -66px;
+                }
             }
         }
         &:after {
