@@ -6,6 +6,18 @@
 // .mobile {
 //     display: none;
 // }
+@media screen and (max-width: 1800px) {
+    .vacancies-page__list_item ul.inactive {
+        margin-top: 72px;
+    }
+    .vacancies-page__list_item ul {
+        // width: 100%;
+        br {
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 1600px) {
     .footer__logo {
         width: 400px;
@@ -20,7 +32,7 @@
     }
 }
 
-@media screen and (max-width: 1440px) { 
+@media screen and (max-width: 1440px) {
     .header__right .btn {
         display: none;
     }
@@ -85,6 +97,10 @@
     .policy-page__title h2 {
         font-size: 28px;
         padding: 0 80px;
+    }
+
+    .vacancies-page__list_item_descr {
+       padding-right: 0;
     }
 }
 
@@ -293,6 +309,59 @@
             }
         }
     }
+
+    .vacancies-page__list_item ul {
+        margin-top: 40px;
+        li {
+            padding-right: 0;
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .vacancies-page__list_item .container {
+        padding: 60px 40px!important;
+    }
+
+    .vacancies-page__list_item_title {
+        position: relative;
+        z-index: 2;
+        small {
+            margin-top: 15px;
+        }
+        span {
+            line-height: 49px;
+        }
+    }
+    // .vacancies-page__list_item_title small {
+       
+    // }
+    .vacancies-page__list_item_number {
+        right: -15px;
+
+        left: auto;
+        &.first {
+            right: -23px;
+        }
+        &.second {
+            right: -13px;
+        }
+        &.third {
+            right: -26px;
+        }
+        &.fourth {
+            right: -25px;
+        }
+        &.fifth {
+            right: -22px;
+        }
+    }
+    .vacancies-page__list_item ul.inactive {
+        li {
+            padding-left: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -340,6 +409,45 @@
     }
     .team-page .team-page__main_position {
         width: 100%;
+    }
+
+    .vacancies-page__list_item_title {
+        font-size: 38px;
+    }
+    .vacancies-page__list_item_descr {
+        font-size: 22px;
+    }
+    .vacancies-page__list_item .container {
+        padding: 40px 30px!important;
+    }
+
+    .vacancies-page__list {
+        margin-top: 40px;
+    }
+    .vacancies-page__list_item_title span {
+        margin-bottom: 25px;
+    }
+
+    .vacancies-page__list_item_number {
+        font-size: 160px;
+        line-height: 92px;
+        // &.first {
+        //     right: -23px;
+        // }
+        // &.second {
+        //     right: -13px;
+        // }
+        // &.third {
+        //     right: -26px;
+        //     top: 7px;
+        // }
+        // &.fourth {
+        //     right: -25px;
+        // }
+        &.fifth {
+            bottom: 3px;
+            right: -22px;
+        }
     }
 }
 
