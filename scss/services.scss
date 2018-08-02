@@ -9,6 +9,36 @@
         padding: 98px 0 87px;
         width: 77%;
         margin: auto;
+        &_toggle {
+            font-size: 36px;
+            color: #2d2528;
+            text-transform: uppercase;
+            display: none;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            position: relative;
+            padding-right: 50px;
+            margin-bottom: 40px;
+            &.active:after {
+                transform: rotate(-135deg);
+                margin: 20px 0 0 39px;
+            }
+            &:after {
+                content: '';
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 8px;
+                right: 30px;
+                position: absolute;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                margin: 10px 0 0 39px;
+                transition: .3s;
+                top: 0;
+            }
+        }
         &_item {
             max-width: 431px;
             width: 100%;
@@ -90,6 +120,14 @@
             }
             &_section_content {
                 width: 100%;
+                display: none;
+                &.active {
+                    display: block;
+                }
+                .desktop {}
+                .mobile {
+                    display: none;
+                }
             }
             &_section {
                 width: 100%;
@@ -145,11 +183,12 @@
 
     &__list {
         max-width: 1920px;
-        margin: auto;
-        // border-bottom: 1px solid #7c7c7c; // padding-bottom: 60px;
+        margin: auto; // border-bottom: 1px solid #7c7c7c; // padding-bottom: 60px;
         &_item {
             width: 100%;
             flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
             font-size: 0;
             margin-bottom: 20px;
             background: #f4f4f4;
@@ -190,11 +229,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                width: 100%;
+                flex-wrap: wrap;
+                height: 416px;
             }
             &_img {
                 width: 50%;
                 overflow: hidden;
-
+                background-size: cover!important;
+                background-position: center!important;
+                height: 100%;
                 &:hover {
                     img {
                         transform: scale(1.05);

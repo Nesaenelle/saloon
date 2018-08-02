@@ -8,7 +8,8 @@ var SharedObj = {
     ProductSlider: new ProductSlider(),
     Animate: new Animate(),
     Lazy: new LazyLoad(),
-    Tabs: new Tabs()
+    Tabs: new Tabs(),
+    Toggle: new Toggle()
 };
 
 
@@ -572,6 +573,18 @@ function Tabs() {
             });
         });
     });
+}
+
+function Toggle() {
+    var toggleBtn = document.querySelector('[data-toggle]');
+    if(toggleBtn) {
+        toggleBtn.addEventListener('click', function(e) {
+            var id = e.currentTarget.getAttribute('data-toggle');
+            var elem = document.querySelector('[data-toggle-block="' + id + '"]');
+            $(elem).slideToggle();
+            $(toggleBtn).toggleClass('active');
+        });
+    }
 }
 
 
