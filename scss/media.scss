@@ -233,7 +233,7 @@
         }
     }
     .info-page__bg {
-        height: 551px;
+        height: calc(100vh - 100px);
     }
     .home-page__item {
         height: calc(100vh - 100px);
@@ -974,6 +974,7 @@
 
     .vacancies-page__list_item_title {
         font-size: 38px;
+        word-break: break-all;
     }
     .vacancies-page__list_item_descr {
         font-size: 22px;
@@ -1080,8 +1081,8 @@
     }
 
     .product__slider_item .btn {
-        width: 100%;
-        min-width: 100%;
+        width: 90%;
+        min-width: 90%;
     }
 
     .shop-filter__dropdown ul li {
