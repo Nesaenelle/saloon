@@ -369,10 +369,11 @@
                 line-height: 49px;
             }
             .btn {
-                padding: 18px 0px 12px 2px;
+                padding: 18px 10px 12px 10px;
                 font-size: 24px;
                 letter-spacing: 1.8px;
-                width: 356px;
+                max-width: 356px;
+                width: 100%;
             }
         }
     }
