@@ -1241,6 +1241,11 @@
             }
         }
     }
+
+    .news-page__list.news-page__list_popular .news-page__list_item {
+        margin-bottom: 45px;
+        padding-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
