@@ -19,6 +19,21 @@
         $c: &;
         opacity: 1;
 
+        &[data-animate] { 
+            .news-page__list_item {
+                opacity: 0;
+                animation-fill-mode: forwards;
+                &:nth-child(3n + 1) {
+                    animation-delay: 0s;
+                }
+                &:nth-child(3n + 2) {
+                    animation-delay: 0.3s;
+                }
+                &:nth-child(3n + 3) {
+                    animation-delay: 0.6s;
+                }
+            }
+        }
         &[data-animate="true"] {
             .news-page__list_item {
                 animation-name: slideinUp;
@@ -28,18 +43,8 @@
 
         &_item {
             width: 49%;
-            opacity: 0;
             margin-bottom: 80px;
-            animation-fill-mode: forwards;
-            &:nth-child(3n + 1) {
-                animation-delay: 0s;
-            }
-            &:nth-child(3n + 2) {
-                animation-delay: 0.3s;
-            }
-            &:nth-child(3n + 3) {
-                animation-delay: 0.6s;
-            }
+
             &_img {
                 overflow: hidden;
                 position: relative;

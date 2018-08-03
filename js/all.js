@@ -9,7 +9,8 @@ var SharedObj = {
     Animate: new Animate(),
     Lazy: new LazyLoad(),
     Tabs: new Tabs(),
-    Toggle: new Toggle()
+    Toggle: new Toggle(),
+    SlickArrows: new SlickArrows()
 };
 
 
@@ -526,7 +527,7 @@ function LazyLoad() {
     var timer;
     var count = 0;
 
-    if(elem) {    
+    if (elem) {
         window.addEventListener('scroll', function() {
             if (count < 3 && isInViewport(loader, 200) && !timer) {
                 loader.style.opacity = 1;
@@ -545,7 +546,7 @@ function LazyLoad() {
                     clearTimeout(timer);
                     timer = undefined;
 
-                    if(count === 3) {
+                    if (count === 3) {
                         loader.style.display = 'none';
                     }
                 }, 500);
@@ -559,16 +560,16 @@ function LazyLoad() {
 function Tabs() {
     var tabs = document.querySelectorAll('[data-tabs]');
 
-    tabs.forEach(function(context){
-        var items =  context.querySelectorAll('[data-tabs-item]');
+    tabs.forEach(function(context) {
+        var items = context.querySelectorAll('[data-tabs-item]');
         var contents = context.querySelectorAll('[data-tabs-content]');
-        items.forEach(function(tab){
+        items.forEach(function(tab) {
             tab.addEventListener('click', function(e) {
-                items.forEach(function(a){ a.classList.remove('active') });
+                items.forEach(function(a) { a.classList.remove('active') });
                 tab.classList.add('active');
                 var id = e.currentTarget.getAttribute('data-tabs-item');
                 var content = context.querySelector('[data-tabs-content="' + id + '"]');
-                contents.forEach(function(a) {a.classList.remove('active')});
+                contents.forEach(function(a) { a.classList.remove('active') });
                 content.classList.add('active');
             });
         });
@@ -577,7 +578,7 @@ function Tabs() {
 
 function Toggle() {
     var toggleBtn = document.querySelector('[data-toggle]');
-    if(toggleBtn) {
+    if (toggleBtn) {
         toggleBtn.addEventListener('click', function(e) {
             var id = e.currentTarget.getAttribute('data-toggle');
             var elem = document.querySelector('[data-toggle-block="' + id + '"]');
@@ -585,6 +586,24 @@ function Toggle() {
             $(toggleBtn).toggleClass('active');
         });
     }
+}
+
+function SlickArrows() {
+    var arrows = document.querySelector('[data-slick-arrows]');
+    if (arrows) {
+        var left = arrows.querySelector('[data-click-arrows-left]');
+        var right = arrows.querySelector('[data-click-arrows-right]');
+        var id = arrows.getAttribute('data-slick-arrows');
+        var instance = document.querySelector('[data-slick-arrows-instance="'+id+'"]');
+        
+        left.addEventListener('click', function(e) {
+            $(instance).slick('slickPrev');
+        });
+        right.addEventListener('click', function(e) {
+            $(instance).slick('slickNext');
+        });
+    }
+
 }
 
 

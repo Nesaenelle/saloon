@@ -367,6 +367,9 @@ main {
 
 .slick-slider {
     margin: 0 115px;
+    .news-page__list_item {
+        margin: 0 18px;
+    }
     &[data-animate="true"] {
         animation-name: slideinUp;
         animation-duration: 1s;
@@ -453,7 +456,7 @@ main {
     height: 145px;
     margin-bottom: 81px;
     padding-top: 34px;
-    margin-top: 105px;
+    margin-top: 10px;
     &[data-animate="true"] {
         animation-name: slideinUp;
         animation-duration: 1s;
@@ -469,6 +472,10 @@ main {
         align-items: center; 
         justify-content: flex-start;
         cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background: darken(#f4f4f4, 10%);
+        }
         img {
             margin-left: 40px;
         }
@@ -484,6 +491,10 @@ main {
         align-items: center; 
         justify-content: flex-end;
         cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background: darken(#f4f4f4, 10%);
+        }
         img {
             margin-right: 40px;
         }

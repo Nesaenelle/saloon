@@ -93,28 +93,43 @@
                 <button class="btn btn-black"><span>записаться в салон</span></button>
             </div>
             <div class="info-page__title" data-animate>интересные новости</div>
-            <div class="news-page__list news-page__list_all" data-animate>
+            <div class="news-page__list news-page__list_all slick-slider" data-slick='{"arrows": false}'  data-slick-arrows-instance="1">
                 <div class="news-page__list_item">
-                    <div class="news-page__list_item_img" data-animate><img src="img/news-regular-1.jpg" alt=""></div>
+                    <div class="news-page__list_item_img"><img src="img/news-regular-1.jpg" alt=""></div>
                     <div class="news-page__list_item_date"> 25 апреля</div>
                     <div class="news-page__list_item_title"><a href="news_inside.html"> Новые процедуры на косметике Ultraceuticals</a></div>
                 </div>
                 <div class="news-page__list_item">
-                    <div class="news-page__list_item_img" data-animate><img src="img/news-regular-2.jpg" alt=""></div>
+                    <div class="news-page__list_item_img"><img src="img/news-regular-2.jpg" alt=""></div>
                     <div class="news-page__list_item_date"> 20 мая</div>
                     <div class="news-page__list_item_title"><a href="news_inside.html"> Открытие третьего салона красоты Hair by IRINA ANDERSON в Corinthia Hotel</a></div>
                 </div>
                 <div class="news-page__list_item">
-                    <div class="news-page__list_item_img" data-animate><img src="img/news-regular-3.jpg" alt=""></div>
+                    <div class="news-page__list_item_img"><img src="img/news-regular-3.jpg" alt=""></div>
+                    <div class="news-page__list_item_date"> 20 мая</div>
+                    <div class="news-page__list_item_title"><a href="news_inside.html"> Открытие третьего салона красоты Hair by IRINA ANDERSON в Corinthia Hotel</a></div>
+                </div>
+                <div class="news-page__list_item">
+                    <div class="news-page__list_item_img"><img src="img/news-regular-1.jpg" alt=""></div>
+                    <div class="news-page__list_item_date"> 25 апреля</div>
+                    <div class="news-page__list_item_title"><a href="news_inside.html"> Новые процедуры на косметике Ultraceuticals</a></div>
+                </div>
+                <div class="news-page__list_item">
+                    <div class="news-page__list_item_img"><img src="img/news-regular-2.jpg" alt=""></div>
+                    <div class="news-page__list_item_date"> 20 мая</div>
+                    <div class="news-page__list_item_title"><a href="news_inside.html"> Открытие третьего салона красоты Hair by IRINA ANDERSON в Corinthia Hotel</a></div>
+                </div>
+                <div class="news-page__list_item">
+                    <div class="news-page__list_item_img"><img src="img/news-regular-3.jpg" alt=""></div>
                     <div class="news-page__list_item_date"> 20 мая</div>
                     <div class="news-page__list_item_title"><a href="news_inside.html"> Открытие третьего салона красоты Hair by IRINA ANDERSON в Corinthia Hotel</a></div>
                 </div>
             </div>            
         </div>
-        <div class="bottom-btn-arrows" data-animate>
-            <div class="bottom-btn-arrows__left"><img src="img/left-arrow-big.png" alt=""></div>
+        <div class="bottom-btn-arrows" data-slick-arrows="1">
+            <div class="bottom-btn-arrows__left" data-click-arrows-left><img src="img/left-arrow-big.png" alt=""></div>
             <button class="btn btn-black"><span>все новости</span></button>
-            <div class="bottom-btn-arrows__right"><img src="img/right-arrow-big.png" alt=""></div>
+            <div class="bottom-btn-arrows__right" data-click-arrows-right><img src="img/right-arrow-big.png" alt=""></div>
         </div>
     </main>
     <footer class="footer">
@@ -177,6 +192,8 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/all.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1xJi0Zin_R5E4EALJw_9yHI_Q-HeLNWY&callback=initMap" async defer></script>
     <script>

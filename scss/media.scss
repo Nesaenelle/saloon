@@ -148,6 +148,9 @@
     .bottom-btn-arrows__right {
         background: none;
         width: auto;
+        &:hover {
+            background: none;
+        }
     }
 
     .services-page__list_item_info_title {
@@ -558,15 +561,21 @@
             margin: 50px 0 60px;
         }
     }
-    .news-page__list {
+
+    .news-page__list.news-page__list_all{
         flex-wrap: wrap;
         &_item {
-            width: 100%!important;
-            &_img {
-                // height: 420px;
-            }
+            width: 100%;
         }
+
     }
+    .news-page__list.news-page__list_all .news-page__list_item {
+        width: 100%;
+    }
+    .news-page__list.news-page__list_popular .news-page__list_item {
+        width: 100%;
+    }
+
 
     .news-page__list.news-page__list_all .news-page__list_item_title,
     .news-page__list.news-page__list_popular .news-page__list_item_title {
