@@ -1056,6 +1056,16 @@
         }
     }
 
+    .info-page__bg {
+        height: calc(100vh - 100px);
+    }
+    .home-page__item {
+        height: calc(100vh - 100px);
+    }
+    .header {
+        height: 100px;
+    }
+
     .contacts-page {
         .question-form form {
             padding: 0;
