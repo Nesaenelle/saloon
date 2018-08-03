@@ -284,10 +284,11 @@
             }
             &:nth-child(3) {
                 margin-top: -52px;
-                width: 30%;
+                // max-width: 30%;
+                width: 304px;
                 display: flex;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: space-between;
             }
         }
         img {
@@ -319,8 +320,11 @@
             text-transform: uppercase;
             font-weight: 600;
             font-size: 24px;
-            margin-right: 95px;
+            // margin-right: 95px;
             letter-spacing: 2.4px;
+            &.mobile {
+                display: none;
+            }
         }
         &_details {
             margin-top: 59px;
