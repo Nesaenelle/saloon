@@ -116,6 +116,8 @@ main {
             left: 0;
             top: 0;
             z-index: 2;
+            background-size: cover!important;
+            background-position: center!important;
         }
         .youtube-play-btn {
             position: absolute;
