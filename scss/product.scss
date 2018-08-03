@@ -23,6 +23,7 @@
         height: 153px;
         line-height: 1.3em;
         letter-spacing: 2.1px;
+        word-break: break-all;
         &:hover {
             text-decoration: underline;
         }
@@ -43,7 +44,8 @@
         padding: 16px 33px 13px 31px;
         font-size: 22px;
         letter-spacing: 3.1px;
-        width: 304px;
+        max-width: 304px;
+        width: 100%;
     }
 }
 
@@ -159,6 +161,7 @@
 }
 
 .shop-page {
+        overflow: hidden;
     .btn-bottom {
         margin: 100px auto;
     }
@@ -539,6 +542,7 @@
             &_item {
                 width: 190px;
                 height: 190px;
+                min-width: 190px;
                 border: 1px solid #f1f1f0;
                 cursor: pointer;
                 border-radius: 3px;
