@@ -929,6 +929,17 @@
             }
         }
     }
+
+    .news-details-page .news-details__list ul li, .news-page .news-details__list ul li {
+        font-size: 22px;
+    }
+    .news-details-page .news-details__subtitle, .news-details-page .news-details__title {
+        font-size: 26px;
+        margin: 60px auto 57px;
+    }
+    .news-details-page .news-details__paragraph, .news-page .news-details__paragraph {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1073,7 +1084,7 @@
     }
     .news-details-page {
         .news-details__title {
-            font-size: 30px;
+            // font-size: 30px;
             width: 100%;
             br {
                 display: none;
@@ -1226,7 +1237,7 @@
 
     .news-details-page {
         .news-details__title {
-            font-size: 30px;
+            // font-size: 30px;
             width: 100%;
             br {
                 display: none;
@@ -1345,6 +1356,12 @@
         font-size: 38px;
         line-height: 48px;
     }
+
+    .bottom-btn-arrows__left, .bottom-btn-arrows__right {
+        img {
+            width: 60px;
+        }
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -1357,5 +1374,13 @@
     .vacancies-page__list_item ul li:first-child {
         font-size: 16px;
         line-height: 20px;
+    }
+
+    .info-page__bg.small h1 {
+        font-size: 28px;
+    }
+
+    .news-details-page .news-details__subtitle, .news-details-page .news-details__title {
+        line-height: 34px;
     }
 }
