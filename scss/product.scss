@@ -255,6 +255,7 @@
 }
 
 .cart-list {
+    overflow: hidden;
     &[data-animate="true"] {
         animation-name: slideinLeft;
         animation-duration: 1s;
@@ -422,6 +423,7 @@
         animation-duration: 1s;
     }
     .btn {
+        height: 100%;
         margin: 0;
         &.btn-transparent-grey {
             font-size: 24px;
