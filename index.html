@@ -45,7 +45,6 @@
             <li><a href="contacts.html">Контакты</a></li>
             <li><a href="product.html" class="active">Онлайн-магазин</a></li>
         </ul>
-
         <div class="socials-block">
             <a href=""><img src="img/inst-black.svg" alt=""> <img src="img/inst-hover.svg" alt=""></a>
             <a href=""><img src="img/fb-black.svg" alt=""> <img src="img/fb-hover.svg" alt=""></a>
@@ -55,9 +54,12 @@
     <main class="home-page">
         <div class="home-page__slider" data-home-page-slider>
             <div class="home-page__slider_inner" data-home-page-slider-inner>
-                <div class="home-page__item" data-home-page-slider-item style="background: url(img/video.jpg)">
-                    <!-- <iframe src="https://www.youtube.com/embed/-rKwPblSdQA?rel=0&amp;showinfo=0"></iframe> -->
-                    <div class="home-page__item_text" data-animate="true">feel the beauty with us</div>
+                <div class="home-page__item" data-home-page-slider-item>
+                    <iframe src="" id="youtube-iframe"></iframe>
+                    <div class="youtube-bg" style="background: url(img/video.jpg)"></div>
+                    <div class="home-page__item_text" data-animate="true">feel the beauty with us
+                        <div class="youtube-play-btn"></div>
+                    </div>
                 </div>
                 <div class="home-page__item" data-home-page-slider-item style="background: url(img/irina.jpg)">
                     <div class="container">
@@ -122,18 +124,32 @@
                         подпишитесь на рассылку!
                     </div>
                     <div class="modal-descr">
-                        и в числе первых вы будеие узнавать <br>о скидках, новинках, трендах <br>и специальных предложениях.
+                        и в числе первых вы будеие узнавать
+                        <br>о скидках, новинках, трендах
+                        <br>и специальных предложениях.
                     </div>
                     <form novalidate>
                         <input type="text" placeholder="E-mail" required data-pattern="email">
                         <button class="btn btn-black"><span>подписаться</span></button>
-                        <div class="modal-bottom-text">Подписываясь на рассылку, вы соглашаетесь <br>с <a href="policy.html">политикой конфиденциальности.</a></div>
+                        <div class="modal-bottom-text">Подписываясь на рассылку, вы соглашаетесь
+                            <br>с <a href="policy.html">политикой конфиденциальности.</a></div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/all.js"></script>
+    <script>
+        var playButton = document.querySelector(".youtube-play-btn");
+        playButton.addEventListener("click", function() {
+            var src = 'https://www.youtube.com/embed/HmZKgaHa3Fg?controls=0&color=white&showinfo=0&autohide=1&enablejsapi=1&autoplay=1&showinfo=0';
+
+            $('#youtube-iframe').attr('src',src);
+            $('.youtube-bg').remove();
+            $('.home-page__item_text').remove();
+        });
+    </script>
 </body>
 
 </html>
