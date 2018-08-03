@@ -1067,6 +1067,12 @@
     .news-page__list.news-page__list_popular .news-page__list_item_title {
         font-size: 26px;
     }
+    .news-details-page__list_item_descr, .news-page__list_item_descr {
+        width: 100%;
+    }
+    .slick-slider .news-page__list_item {
+        margin: 0;
+    }
     .news-details-page {
         .news-details__title {
             font-size: 30px;
