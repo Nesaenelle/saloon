@@ -917,6 +917,9 @@
     .home-page__item_info {
         padding: 0;
     }
+    .home-page__item_descr {
+        padding-left: 0;
+    }
     .home-page__item_descr:before, .home-page__item_descr:after {
         content: none;
     }
@@ -1203,6 +1206,9 @@
             display: none;
         }
     }
+    .home-page__item .separator {
+        height: 20px;
+    }
     .home-page__item_text {
         font-size: 42px;
     }
@@ -1210,7 +1216,7 @@
         font-size: 38px;
     }
     .home-page__item_subtitle {
-        font-size: 22px;
+        font-size: 20px;
     }
     .crossed-title h2 {
         font-size: 38px;
