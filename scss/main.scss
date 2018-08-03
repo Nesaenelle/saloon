@@ -27,7 +27,15 @@ main {
     animation-fill-mode: forwards;
 }
 
-.clroom-video-overlay-play{ position:absolute; left:0; right:0; top:0; bottom: 0; z-index:3; background:rgba(0, 0, 0, 0); }
+.clroom-video-overlay-play {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0);
+}
 
 
 .title {
@@ -106,12 +114,13 @@ main {
             height: 100%;
             position: absolute;
             left: 0;
-            top: 0;z-index: 2;
+            top: 0;
+            z-index: 2;
         }
         .youtube-play-btn {
             position: absolute;
             right: 0;
-            bottom: -50px;
+            bottom: -70px;
             left: 0;
             margin: auto;
             width: 60px;
@@ -120,6 +129,11 @@ main {
             background: url(img/play.png);
             z-index: 99;
             z-index: 3;
+            transition: 0.2s;
+            opacity: .8;
+            &:hover {
+                opacity: 1;
+            }
         }
 
         .separator {
@@ -127,7 +141,6 @@ main {
             height: 60px;
             margin: 20px auto;
             background: #fff;
-
         }
         &_text {
             position: relative;
@@ -164,7 +177,6 @@ main {
             letter-spacing: 6px;
             line-height: 46px;
             font-weight: 400;
-
         }
         &_subtitle {
             font-size: 24px;
@@ -174,7 +186,6 @@ main {
             letter-spacing: 1.8px;
             margin-bottom: 90px;
             padding-left: 10px;
-
         }
         &_descr {
             font-size: 26px;
@@ -271,8 +282,7 @@ main {
 
             &[data-animate="true"] {
                 animation-name: slideinLeft;
-                animation-duration: 1s;
-                // animation-delay: 0.5s;
+                animation-duration: 1s; // animation-delay: 0.5s;
             }
             &:after {
                 content: '';
@@ -312,8 +322,7 @@ main {
         font-weight: 600;
         &[data-animate="true"] {
             animation-name: slideinLeft;
-            animation-duration: 1s;
-            // animation-delay: 0.5s;
+            animation-duration: 1s; // animation-delay: 0.5s;
         }
         &.crossed {
             position: relative;
@@ -497,7 +506,7 @@ main {
         left: 0;
         top: 0;
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: flex-start;
         cursor: pointer;
         transition: 0.3s;
@@ -516,7 +525,7 @@ main {
         right: 0;
         top: 0;
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: flex-end;
         cursor: pointer;
         transition: 0.3s;
