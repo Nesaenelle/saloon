@@ -242,13 +242,13 @@
         }
     }
     .info-page__bg {
-        height: calc(100vh - 100px);
+        height: calc(100vh - 134px);
     }
     .home-page__item {
-        height: calc(100vh - 100px);
+        height: calc(100vh - 134px);
     }
     .header {
-        height: 100px;
+        height: 134px;
     }
     .header__right {
         padding: 0;
@@ -272,6 +272,7 @@
     .header__language {
         margin: 0;
         display: block;
+        line-height: 36px;
         li {
             text-align: right;
             margin-right: 0;
