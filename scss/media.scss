@@ -974,7 +974,7 @@
 
     .vacancies-page__list_item_title {
         font-size: 38px;
-        word-break: break-all;
+        // word-break: break-all;
     }
     .vacancies-page__list_item_descr {
         font-size: 22px;
@@ -1161,13 +1161,14 @@
         .product-page__details_thumbs {
             display: none;
         }
-        .product-page__details_img_left, .product-page__details_img_right {
+        .product-page__details_img_left,
+        .product-page__details_img_right {
             display: block;
             top: 0;
             bottom: 0;
             margin: auto;
         }
-        .product-page__details_img_left{
+        .product-page__details_img_left {
             left: 20px;
         }
         .product-page__details_img_right {
@@ -1176,7 +1177,6 @@
         .product-page__details_img {
             position: relative;
             box-shadow: 10px 10px 50px -20px #000;
-
         }
         .product-page__details_img img {
             width: 100%;
@@ -1223,6 +1223,16 @@
         line-height: 54px;
     }
 
+    .vacancies-page__list_item_title {
+        font-size: 26px;
+    }
+    .vacancies-page__list_item ul li:first-child {
+        font-size: 20px;
+    }
+    .vacancies-page__list_item ul li {
+        font-size: 20px;
+    }
+
     .product__slider_item {
         margin: 0;
         box-shadow: none;
@@ -1258,5 +1268,16 @@
     .shop-page__banner_title {
         font-size: 38px;
         line-height: 48px;
+    }
+}
+
+@media screen and (max-width: 375px) { 
+    .vacancies-page__list_item_title {
+        font-size: 22px;
+    }
+
+    .product__slider_item_title, .vacancies-page__list_item ul li, .vacancies-page__list_item ul li:first-child {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
