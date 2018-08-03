@@ -19,6 +19,13 @@
         $c: &;
         opacity: 1;
 
+        &.slick-slider {
+            margin: 0;
+            .slick-list.draggable{
+                padding-top: 0;
+            }
+        }
+
         &[data-animate] { 
             .news-page__list_item {
                 opacity: 0;
@@ -223,7 +230,7 @@
             font-size: 38px;
             text-align: center;
             text-transform: uppercase;
-            margin: 87px auto 50px;
+            margin: 87px auto 59px;
             width: 70%;
             line-height: 49px;
             letter-spacing: 2.4px;
@@ -233,23 +240,36 @@
                 animation-name: slideinUp;
                 animation-duration: 1s;
             }
-            &:after {
-                position: absolute;
-                content: '';
+        }
+        &__separator {
                 width: 214px;
-                margin: auto;
-                left: 0;
-                right: 0;
+                margin: 30px auto 30px;
                 bottom: -61px;
                 background: #000;
-                height: 3px
+                height: 3px;
+                &.big {
+                    margin: 120px auto 30px;
+                }
+                &[data-animate="true"] {
+                    animation-name: slideinLeft;
+                    animation-duration: 1s;
+                    animation-delay: 0.5s;
+                }
+        }
+        &__image {
+            &[data-animate="true"] {
+                animation-name: slideinLeft;
+                animation-duration: 1s;
+            }
+            img {
+                width: 100%;
             }
         }
         &__subtitle {
             font-size: 32px;
             text-align: center;
             text-transform: uppercase;
-            margin: 131px auto 103px;
+            margin: 70px auto 103px;
             letter-spacing: 1.6px;
             width: 70%;
             line-height: 49px;
@@ -282,6 +302,33 @@
                         margin-bottom: 4px;
                     }
                 }
+            }
+        }
+
+        &__paragraph {
+            font-size: 30px;
+            // margin: 100px 0 60px;
+            width: 80%;
+            margin: 84px auto 72px;
+            &[data-animate="true"] {
+                animation-name: slideinUp;
+                animation-duration: 1s;
+            }
+            p {
+                line-height: 36px;
+                margin-top: 36px;
+            }
+            a {
+                text-decoration: underline;
+            }
+            // b {
+            //     display: block;
+            // }
+            .news-details__separator {
+                margin: 60px auto;
+            }
+            &.center {
+                text-align: center;
             }
         }
 

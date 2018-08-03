@@ -367,14 +367,13 @@
         }
         .socials-block {
             justify-content: center;
-            width: 100%; 
+            width: 100%;
             padding-right: 0;
             a {
                 &:first-child {
                     margin-left: 0;
                 }
-            }
-            // a {
+            } // a {
             //     width: 70px;
             //     min-width: 70px;
             //     height: 70px;
@@ -399,8 +398,7 @@
             //         }
             //     }
             // }
-        }
-        // .btn {
+        } // .btn {
         //     margin: 40px auto;
         //     display: block;
         // }
@@ -562,12 +560,11 @@
         }
     }
 
-    .news-page__list.news-page__list_all{
+    .news-page__list.news-page__list_all {
         flex-wrap: wrap;
         &_item {
             width: 100%;
         }
-
     }
     .news-page__list.news-page__list_all .news-page__list_item {
         width: 100%;
@@ -941,7 +938,8 @@
     .home-page__item_descr {
         padding-left: 0;
     }
-    .home-page__item_descr:before, .home-page__item_descr:after {
+    .home-page__item_descr:before,
+    .home-page__item_descr:after {
         content: none;
     }
 }
@@ -1009,8 +1007,7 @@
     }
 
     .vacancies-page__list_item_title {
-        font-size: 38px;
-        // word-break: break-all;
+        font-size: 38px; // word-break: break-all;
     }
     .vacancies-page__list_item_descr {
         font-size: 22px;
@@ -1067,7 +1064,8 @@
     .news-page__list.news-page__list_popular .news-page__list_item_title {
         font-size: 26px;
     }
-    .news-details-page__list_item_descr, .news-page__list_item_descr {
+    .news-details-page__list_item_descr,
+    .news-page__list_item_descr {
         width: 100%;
     }
     .slick-slider .news-page__list_item {
@@ -1180,6 +1178,7 @@
 
     .info-page__title {
         margin: 50px 0;
+        font-size: 36px;
     }
 
     .product-page {
@@ -1224,6 +1223,24 @@
             width: 100%;
         }
     }
+
+    .news-details-page {
+        .news-details__title {
+            font-size: 30px;
+            width: 100%;
+            br {
+                display: none;
+            }
+        }
+        .news-details__paragraph {
+            margin: 40px auto;
+            width: 100%;
+            font-size: 22px;
+            p {
+                line-height: 32px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1250,7 +1267,7 @@
     }
 
     .info-page__title {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .team-page__list_item_info {
@@ -1325,12 +1342,14 @@
     }
 }
 
-@media screen and (max-width: 375px) { 
+@media screen and (max-width: 375px) {
     .vacancies-page__list_item_title {
         font-size: 22px;
     }
 
-    .product__slider_item_title, .vacancies-page__list_item ul li, .vacancies-page__list_item ul li:first-child {
+    .product__slider_item_title,
+    .vacancies-page__list_item ul li,
+    .vacancies-page__list_item ul li:first-child {
         font-size: 16px;
         line-height: 20px;
     }
