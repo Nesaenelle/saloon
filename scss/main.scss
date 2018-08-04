@@ -430,11 +430,11 @@ main {
             text-transform: uppercase;
             background: #fff;
             z-index: 2;
-            width: 300px;
+            width: 360px;
             margin: auto;
-            /* line-height: 0; */
             left: 0;
             right: 0;
+            letter-spacing: 4.4px;
         }
         &:after {
             pointer-events: none;
@@ -447,7 +447,7 @@ main {
             top: 0;
         }
         .slick-slider {
-            margin: 0 105px;
+            margin: 0 100px;
         }
     }
     .slick-list.draggable {

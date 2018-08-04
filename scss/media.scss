@@ -951,6 +951,10 @@
     .news-page .news-details__paragraph {
         width: 100%;
     }
+
+    .shop-page__banner {
+        margin-top: 70px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1386,6 +1390,11 @@
     }
     .home-page__item_next {
         height: 53px;
+    }
+
+    .slick-slider-wrapper_title {
+        font-size: 36px;
+        width: 100%;
     }
 }
 
