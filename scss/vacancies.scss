@@ -31,7 +31,7 @@
             }
             &:first-child {
                 .container {
-                    padding: 94px 117px 140px 165px;
+                    padding: 94px 117px 107px 165px;
                 }
             }
             &:nth-child(2) {
@@ -79,7 +79,7 @@
                         }
                     }
                     font-size: 24px;
-                    padding-left: 62px;
+                    padding-left: 64px;
                     position: relative;
                     margin-bottom: 11px;
                     line-height: 30px;
@@ -92,6 +92,10 @@
                         left: 22px;
                         background: #000;
                         top: 8px;
+                    }
+                    &.padding {
+                      padding-top: 5px;
+                      padding-bottom: 10px;
                     }
                     &.active {
                         font-weight: 600;
@@ -139,6 +143,7 @@
                     position: relative;
                     z-index: 2;
                     margin-bottom: 22px;
+                    margin-top: -2px;
                 }
                 &:after {
                     content: '';
