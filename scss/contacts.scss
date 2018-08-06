@@ -82,7 +82,9 @@
                 }
 
             }
-
+            &_wrapper {
+                height: 230px;
+            }
             &_address {
                 font-size: 24px;
                 color: #2d2528;
@@ -98,7 +100,7 @@
                 color: #2d2528;
                 text-transform: uppercase;
                 text-align: center;
-                height: 35px;
+                // height: 35px;
                 margin-top: 14px;
                 letter-spacing: 2.4px;
             }

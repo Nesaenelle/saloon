@@ -204,6 +204,9 @@
     // main {
     //     min-height: calc(100% - 100px - $footer-top-height - $footer-bottom-height);
     // }
+    .contacts-page__list_item_wrapper {
+        height: auto;
+    }
     .crossed-title {
         margin: 30px 0 90px 0;
         h2 {
@@ -888,7 +891,7 @@
         flex-wrap: wrap;
         &_img {
             img {
-                max-width: 500px;
+                // max-width: 500px;
             }
             height: 600px;
         }
@@ -1070,15 +1073,7 @@
         }
     }
 
-    .info-page__bg {
-        height: calc(100vh - 100px);
-    }
-    .home-page__item {
-        height: calc(100vh - 100px);
-    }
-    .header {
-        height: 100px;
-    }
+
 
     .contacts-page {
         .question-form form {
@@ -1238,19 +1233,19 @@
         .product-page__details_thumbs {
             display: none;
         }
-        .product-page__details_img_left,
-        .product-page__details_img_right {
-            display: block;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-        }
-        .product-page__details_img_left {
-            left: 20px;
-        }
-        .product-page__details_img_right {
-            right: 20px;
-        }
+        // .product-page__details_img_left,
+        // .product-page__details_img_right {
+        //     display: block;
+        //     top: 0;
+        //     bottom: 0;
+        //     margin: auto;
+        // }
+        // .product-page__details_img_left {
+        //     left: 20px;
+        // }
+        // .product-page__details_img_right {
+        //     right: 20px;
+        // }
         .product-page__details_img {
             position: relative;
             box-shadow: 10px 10px 50px -20px #000;
@@ -1285,6 +1280,27 @@
 }
 
 @media screen and (max-width: 480px) {
+    .contacts-page .subscription-form__title {
+        font-size: 26px;
+        small {
+            font-size: 16px;
+        }
+    }
+    .contacts-page .question-form form .btn {
+        min-width: 100%;
+    }
+    .contacts-page .subscription-form .container {
+        padding: 40px 20px;
+    }
+
+    .contacts-page .subscription-form form {
+        padding: 0 20px;
+    }
+
+    .info-page__bg h1 {
+        font-size: 36px;
+    }
+
     .sidebar {
         width: 100%;
         &__socials {
@@ -1399,6 +1415,16 @@
 }
 
 @media screen and (max-width: 375px) {
+    .info-page__bg {
+        height: calc(100vh - 100px);
+    }
+    .home-page__item {
+        height: calc(100vh - 100px);
+    }
+    .header {
+        height: 100px;
+    }
+
     .vacancies-page__list_item_title {
         font-size: 22px;
     }
