@@ -1,6 +1,8 @@
 body {
     font-family: 'Circe', sans-serif;
     min-width: 320px;
+    max-width: 1920px;
+    margin: auto;
 }
 
 main {
@@ -54,6 +56,7 @@ main {
 .home-page {
     &__slider {
         overflow: hidden;
+        position: relative;
         &_inner {
             transition: 0.5s;
         }

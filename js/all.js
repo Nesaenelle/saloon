@@ -371,10 +371,11 @@ HomePageSlider.prototype.next = function() {
 
 HomePageSlider.prototype.update = function() {
     if (this.sliderInner) {
-        this.sliderInner.style.width = this.slides.length * window.innerWidth + 'px';
+        var windowWidth = (window.innerWidth <= 1920 ? window.innerWidth : 1920);
+        this.sliderInner.style.width = this.slides.length * windowWidth + 'px';
 
         this.slides.forEach(function(slide, i) {
-            slide.style.width = window.innerWidth + 'px';
+            slide.style.width = windowWidth + 'px';
         });
 
         this.position();
