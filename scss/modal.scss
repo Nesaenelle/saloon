@@ -356,12 +356,12 @@
 @media screen and (max-width: 1280px) {
     .modal {
 
-        &[data-modal="online"], &[data-modal="team"] {
+        &[data-modal="online"],
+        &[data-modal="team"] {
             .modal-body {
                 flex-wrap: wrap;
                 height: 900px;
                 max-width: 578px; // 
-
                 max-height: 85%;
                 .modal-left {
                     width: 100%;
@@ -427,7 +427,7 @@
         }
 
         &[data-modal="online"] {
-            .modal-body { 
+            .modal-body {
                 .modal-bottom-text {
                     font-size: 18px;
                 }
@@ -436,11 +436,26 @@
     }
 }
 
-@media screen and (max-width:980px) {}
+@media screen and (max-width:980px) {
+    .modal {
 
-@media screen and (max-width:768px) {
 
+        &[data-modal="team"],  &[data-modal="online"]{
+            .modal-body {
+                height: 600px;
+                .modal-left {
+                    display: none;
+                }
+                .modal-right {
+                    max-height: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
+
+@media screen and (max-width:768px) {}
 
 @media screen and (max-width: 600px) {}
 

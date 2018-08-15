@@ -22,7 +22,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 35px; // padding-bottom: 11px;
+        padding-right: 15px; // padding-bottom: 11px;
         .btn {
             margin-top: -18px;
         }
@@ -41,6 +41,8 @@
             font-size: 20px;
             letter-spacing: 2px;
             cursor: pointer;
+            transition: 0.2s;
+            font-weight: 400;
             &.active {
                 font-weight: 800;
             }
@@ -49,6 +51,9 @@
                 &:after {
                     content: none;
                 }
+            }
+            &:hover {
+                font-weight: 800;
             }
             &:after {
                 content: '';
@@ -107,7 +112,21 @@
         z-index: 10;
         cursor: pointer;
         position: relative;
+        transition: 0.3s;
+        &:hover {
+            transform: translateX(5px);
+            span {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+                &:nth-child(2){
 
+                }
+                &:nth-child(3) {
+
+                }
+            }
+        }
         &.active {
             &+.dropdown-menu {
                 opacity: 1;

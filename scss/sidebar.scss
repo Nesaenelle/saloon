@@ -22,6 +22,25 @@
                 a {
                     animation-duration: 1s;
                     animation-name: slideinUp;
+                    &.shop-link {
+                        &:after {
+                            height: 5px;
+                            background: #1d1d1b;
+                            content: '';
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            width: 0%;
+                            margin: auto;
+                            right: 0;
+                            transition: .3s;
+                        }
+                        &:hover {
+                            &:after {
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
                 &:nth-child(1) a{
                     animation-delay: 0.1s;
@@ -44,6 +63,7 @@
                 &:nth-child(7) a{
                     animation-delay: 0.7s;
                 }
+
             }
         }
     }

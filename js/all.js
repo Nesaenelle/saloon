@@ -10,6 +10,7 @@ var SharedObj = {
     Lazy: new LazyLoad(),
     Tabs: new Tabs(),
     Toggle: new Toggle(),
+    ToggleTabs: new ToggleTabs(),
     SlickArrows: new SlickArrows()
 };
 
@@ -587,6 +588,24 @@ function Toggle() {
             $(toggleBtn).toggleClass('active');
         });
     }
+}
+
+
+function ToggleTabs() {
+    // var toggleBtn = document.querySelector('[data-toggle]');
+    var tabs = document.querySelectorAll('[data-toggle-block]');
+
+    // if (tabs) {
+        tabs.forEach(function(tab){
+            tab.addEventListener('click', function(e) {
+                tabs.forEach(function(a){ $(a).removeClass('active')})
+                // var id = e.currentTarget.getAttribute('data-toggle-block');
+                // var elem = document.querySelector('[data-toggle-block="' + id + '"]');
+                // $(elem).slideToggle();
+                $(this).addClass('active');
+            });
+        });
+    // }
 }
 
 function SlickArrows() {

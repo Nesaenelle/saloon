@@ -499,6 +499,7 @@ main {
     margin-bottom: 81px;
     padding-top: 34px;
     margin-top: 10px;
+    overflow: hidden;
     &[data-animate="true"] {
         animation-name: slideinUp;
         animation-duration: 1s;
@@ -507,7 +508,7 @@ main {
         width: 277px;
         height: 145px;
         position: absolute;
-        background: #f4f4f4;
+        // background: #f4f4f4;
         left: 0;
         top: 0;
         display: flex;
@@ -516,7 +517,8 @@ main {
         cursor: pointer;
         transition: 0.3s;
         &:hover {
-            background: darken(#f4f4f4, 10%);
+            transform: translateX(-10px);
+            // background: darken(#f4f4f4, 10%);
         }
         img {
             margin-left: 40px;
@@ -526,7 +528,7 @@ main {
         width: 277px;
         height: 145px;
         position: absolute;
-        background: #f4f4f4;
+        // background: #f4f4f4;
         right: 0;
         top: 0;
         display: flex;
@@ -535,7 +537,8 @@ main {
         cursor: pointer;
         transition: 0.3s;
         &:hover {
-            background: darken(#f4f4f4, 10%);
+            transform: translateX(10px);
+            // background: darken(#f4f4f4, 10%);
         }
         img {
             margin-right: 40px;

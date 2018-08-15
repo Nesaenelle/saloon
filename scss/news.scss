@@ -91,7 +91,7 @@
             &_title {
                 text-align: center; // padding: 20px;
                 font-size: 36px;
-                font-weight: 600;
+                font-weight: 400;
                 text-transform: uppercase;
                 line-height: 1.3em;
                 &:hover {
@@ -117,6 +117,7 @@
                     text-transform: uppercase;
                     letter-spacing: 3px;
                     position: relative;
+                    font-weight: 300;
                     &:before {
                         content: '';
                         position: absolute;

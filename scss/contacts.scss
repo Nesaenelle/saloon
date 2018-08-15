@@ -83,12 +83,12 @@
 
             }
             &_wrapper {
-                height: 230px;
+                height: 255px;
             }
             &_address {
                 font-size: 24px;
                 color: #2d2528;
-                font-weight: 600;
+                font-weight: 400;
                 text-transform: uppercase;
                 text-align: center;
                 margin-top: 31px;
@@ -101,8 +101,13 @@
                 text-transform: uppercase;
                 text-align: center;
                 // height: 35px;
+                font-weight: 400;
                 margin-top: 14px;
                 letter-spacing: 2.4px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                height: 35px;
             }
             &_phone {
                 font-size: 24px;
@@ -110,7 +115,29 @@
                 text-transform: uppercase;
                 text-align: center;
                 margin-top: 12px;
+                font-weight: 600;
                 letter-spacing: 2px;
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                img {
+                    width: 19px;
+                    height: 22px;
+                    position: relative;
+                    top: 3px;
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+            &_time {
+                font-size: 24px;
+                color: #2d2528;
+                text-transform: uppercase;
+                text-align: center;
+                // height: 35px;
+                font-weight: 400;
+                margin-top: 14px;
+                letter-spacing: 2.4px;
             }
             &_marker {
                 width: 26px;
