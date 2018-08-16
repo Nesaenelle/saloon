@@ -259,12 +259,12 @@
             font-size: 28px;
         }
     }
-    .info-page__bg {
-        height: calc(100vh - 134px);
-    }
-    .home-page__item {
-        height: calc(100vh - 134px);
-    }
+    // .info-page__bg {
+    //     height: calc(100vh - 134px);
+    // }
+    // .home-page__item {
+    //     height: calc(100vh - 134px);
+    // }
     .header {
         height: 134px;
     }
@@ -318,7 +318,7 @@
         padding: 0 20px;
     }
     .home-page__item_text {
-        font-size: 64px; // width: 1%;
+        font-size: 58px; // width: 1%;
     }
     .home-page__item {
         &:nth-child(2) {
@@ -1014,9 +1014,19 @@
     .home-page__item_descr:after {
         content: none;
     }
+    .home-page__item_text {
+        width: 95%;
+        font-size: 50px; // width: 1%;
+        &:after {
+            top: -32px;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
+    .home-page__item_text {
+        font-size: 42px; // width: 1%;
+    }
     .home-page__item_descr {
         display: none;
     }
@@ -1033,9 +1043,6 @@
         }
     }
 
-    .home-page__item_text {
-        font-size: 56px;
-    }
 
     .sidebar {
         padding: 50px 10% 50px 10%;
@@ -1322,6 +1329,13 @@
 }
 
 @media screen and (max-width: 480px) {
+    .home-page__item_text {
+        font-size: 38px; 
+        &:after {
+            display: none;
+        }
+    }
+
     .contacts-page .subscription-form__title {
         font-size: 26px;
         small {
@@ -1352,9 +1366,7 @@
     .home-page__item .separator {
         height: 20px;
     }
-    .home-page__item_text {
-        font-size: 42px;
-    }
+
     .home-page__item_title {
         font-size: 38px;
     }
@@ -1457,12 +1469,12 @@
 }
 
 @media screen and (max-width: 375px) {
-    .info-page__bg {
-        height: calc(100vh - 100px);
-    }
-    .home-page__item {
-        height: calc(100vh - 100px);
-    }
+    // .info-page__bg {
+    //     height: calc(100vh - 100px);
+    // }
+    // .home-page__item {
+    //     height: calc(100vh - 100px);
+    // }
     .header {
         height: 100px;
     }
@@ -1485,5 +1497,8 @@
     .news-details-page .news-details__subtitle,
     .news-details-page .news-details__title {
         line-height: 34px;
+    }
+    .home-page__item_text {
+        font-size: 32px;  
     }
 }

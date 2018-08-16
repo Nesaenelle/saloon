@@ -55,10 +55,15 @@
         <div class="home-page__slider" data-home-page-slider>
             <div class="home-page__slider_inner" data-home-page-slider-inner>
                 <div class="home-page__item" data-home-page-slider-item>
-                    <iframe src="" id="youtube-iframe"></iframe>
-                    <div class="youtube-bg" style="background: url(img/video.jpg)"></div>
+                    <!-- <iframe src="" id="youtube-iframe"></iframe> -->
+                    <!-- <div class="youtube-bg" style="background: url(img/video.jpg)"></div> -->
+                    <video src="video.mp4" autoplay loop><p>Fallback content to cover incompatibility issues</p>
+  <!--                     <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+                      <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska"> -->
+                    </video>
+
                     <div class="home-page__item_text" data-animate="true">feel the beauty with us
-                        <div class="youtube-play-btn"></div>
+                        <!-- <div class="youtube-play-btn"></div> -->
                     </div>
                 </div>
                 <div class="home-page__item" data-home-page-slider-item style="background: url(img/irina.jpg)">
@@ -140,7 +145,7 @@
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/all.js"></script>
-    <script>
+<!--     <script>
         var playButton = document.querySelector(".youtube-play-btn");
         playButton.addEventListener("click", function() {
             var src = 'https://www.youtube.com/embed/HmZKgaHa3Fg?controls=0&color=white&showinfo=0&autohide=1&enablejsapi=1&autoplay=1&showinfo=0';
@@ -149,7 +154,7 @@
             $('.youtube-bg').remove();
             $('.home-page__item_text').remove();
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
