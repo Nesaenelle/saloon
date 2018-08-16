@@ -380,17 +380,24 @@
     }
     .footer {
         height: auto;
-        .container {
-            flex-direction: column-reverse;
-            flex-wrap: wrap;
-            padding: 20px;
+        .footer-top {
+            .container {
+                flex-direction: column-reverse;
+                padding: 20px;
+            }
         }
+         .footer-bottom  {
+            .container {
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+         }
         &__logo {
             width: 100%;
             text-align: center;
             margin-top: 30px;
             border-top: 1px solid #e3e2e3;
-            padding-top: 20px;
+            padding-top: 30px;
             img {
                 padding-right: 0;
                 &:first-child {
@@ -1069,7 +1076,13 @@
 
 
     .policy-page {
-        padding-top: 30px;
+        padding-top: 0px;
+        .policy-page__title.first {
+            margin-top: 15px!important;
+        }
+        .policy-page__text_inner>div {
+            line-height: 22px;
+        }
     }
     .policy-page__title {
         margin: 50px 0!important;
@@ -1355,6 +1368,12 @@
         h2 {
             font-size: 18px;
         }
+    }
+
+    .footer-bottom__copyright, .footer-bottom__author {
+        width: 100%;
+        text-align: center;
+        padding: 0;
     }
 }
 
