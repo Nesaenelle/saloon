@@ -6,7 +6,7 @@ body {
 }
 
 main {
-    min-height: calc(100% - 156px - #{$footer-top-height} - #{$footer-bottom-height});
+    min-height: calc(100% - #{$header-height} - #{$footer-top-height} - #{$footer-bottom-height});
 }
 
 .container {
@@ -62,7 +62,7 @@ main {
         }
     }
     &__item {
-        max-height: calc(100vh - 156px);
+        max-height: calc(100vh - #{$header-height});
         align-items: center;
         overflow: hidden;
         position: relative;

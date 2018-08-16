@@ -1,6 +1,6 @@
 .policy-page {
-    padding-top: 82px;
-    padding-bottom: 90px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     .container {}
     &__title {
         text-align: center;
@@ -11,13 +11,13 @@
             animation-name: slideinUp;
         }
         &.first {
-            margin: 40px auto;
+            margin: 25px auto;
         }
         &.second {
-            margin: 100px auto;
+            margin: 80px auto 0;
         }
         &.third {
-            margin: 127px auto 148px;
+            margin: 80px auto 0;
             h2 {
                 top: 14px;
             }
@@ -26,7 +26,7 @@
             font-weight: 600;
                 letter-spacing: 3.3px;
                 line-height: 1.4em;
-                font-size: 36px;
+                font-size: 24px;
                 margin: auto;
                 background: #fff;
                 position: relative;
@@ -46,9 +46,9 @@
     }
     &__text {
         width: 65%;
-        margin: 99px auto 0;
-        font-size: 24px;
-        line-height: 30px;
+        margin: 50px auto 0;
+        font-size: 18px;
+        line-height: 24px;
         font-weight: 300;
         &[data-animate="true"] {
             animation-duration: 1s;

@@ -4,18 +4,18 @@
         display: none;
     }
     &-top {
-        height: $footer-top-height;
+        min-height: $footer-top-height;
         .container {
             display: flex; // align-items: flex-start;
             justify-content: space-between;
-            padding: 74px 97px;
+            padding: 60px 97px 30px;
         }
     }
     &__logo {
-        width: 502px;
+        width: 350px;
         img {
             padding-right: 33px;
-            max-width: 410px;
+            max-width: 300px;
             &:last-child {
                 display: none;
                 padding: 0 30px;
@@ -25,17 +25,18 @@
     &__list {
         display: flex;
         margin-top: -3px;
+        width: 45%;
         ul {
-            width: 330px;
+            width: 280px;
             padding: 0 64px 0 65px;
             border-left: 1px solid #ececec;
             &:last-child {
-                padding: 0 64px 0 60px;
+                padding: 0 40px 0 40px;
             }
             li {
                 a {
                     color: #7d7d7d;
-                    font-size: 20px;
+                    font-size: 16px;
                     font-weight: 300;
                     margin: 0 0 19px;
                     display: block;
@@ -65,13 +66,13 @@
         }
         &__copyright {
             color: #41413d;
-            font-size: 16px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1.2px;
         }
         &__author {
             color: #41413d;
-            font-size: 16px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1.1px;
             padding-right: 14px;
@@ -94,11 +95,11 @@
     padding-bottom: 5px;
     a {
         display: block;
-        border: 3px solid #bfbebf;
-        margin-left: 25px;
-        width: 54px;
-        min-width: 54px;
-        height: 54px;
+        border: 2px solid #bfbebf;
+        margin-left: 15px;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
         position: relative;
         &:hover {
             img {
@@ -114,20 +115,20 @@
                 }
                 &.vk {
                     &:last-child {
-                        top: 9px;
+                        top: 11px;
                     }
                 }
             }
         }
         img {
-            width: 23px;
+            width: 15px;
             position: absolute;
             margin: auto;
             left: 0;
             right: 0;
             transition: 0.3s;
             &:first-child {
-                top: 12px;
+                top: 11px;
                 opacity: 1;
                 visibility: visible;
             }
@@ -137,8 +138,8 @@
                 visibility: hidden;
             }
             &.vk {
-                width: 29px;
-                top: 9px;
+                width: 15px;
+                top: 11px;
                 &:last-child {
                     top: 50px;
                 }
