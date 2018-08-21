@@ -286,8 +286,8 @@
             padding: 0 20px;
         }
         &.small h1 {
-            letter-spacing: 3px;
-            font-size: 32px;
+            letter-spacing: 2px;
+            font-size: 28px;
             br {
                 display: block;
             }
@@ -1113,6 +1113,13 @@
     .home-page__item_descr {
         display: none;
     }
+    .info-page__bg.small h1 {
+        margin-top: 0px;
+        font-size: 28px;
+        &:after {
+            display: none;
+        }
+    }
     .info-page__bg {
         h1 {
             font-size: 48px;
@@ -1263,7 +1270,17 @@
         }
         .news-details__subtitle {
             width: 100%;
-            font-size: 24px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        .news-details__list ul li {
+            font-size: 18px;
+        }
+        .news-details__address_title, .news-details__address_title {
+            font-size: 20px;
+        }
+        .news-details__address_value, .news-details__address_value {
+            font-size: 20px;
         }
     }
 
@@ -1385,7 +1402,7 @@
 
     .info-page__title {
         margin: 50px 0;
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .product-page {
@@ -1433,6 +1450,7 @@
     .news-details-page {
         .news-details__title {
             // font-size: 30px;
+            font-size: 20px;
             width: 100%;
             br {
                 display: none;
