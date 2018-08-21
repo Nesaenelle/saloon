@@ -2,10 +2,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 53px 169px;
+    padding: 53px 60px 53px 80px;
     background: #fff;
     z-index: 100;
-    width: 595px;
+    width: 400px;
     min-width: 320px;
     max-width: 595px;
     min-height: 100%;
@@ -24,7 +24,7 @@
                     animation-name: slideinUp;
                     &.shop-link {
                         &:after {
-                            height: 5px;
+                            height: 3px;
                             background: #1d1d1b;
                             content: '';
                             position: absolute;
@@ -42,28 +42,27 @@
                         }
                     }
                 }
-                &:nth-child(1) a{
+                &:nth-child(1) a {
                     animation-delay: 0.1s;
                 }
-                &:nth-child(2) a{
+                &:nth-child(2) a {
                     animation-delay: 0.2s;
                 }
-                &:nth-child(3) a{
+                &:nth-child(3) a {
                     animation-delay: 0.3s;
                 }
-                &:nth-child(4) a{
+                &:nth-child(4) a {
                     animation-delay: 0.4s;
                 }
-                &:nth-child(5) a{
+                &:nth-child(5) a {
                     animation-delay: 0.5s;
                 }
-                &:nth-child(6) a{
+                &:nth-child(6) a {
                     animation-delay: 0.6s;
                 }
-                &:nth-child(7) a{
+                &:nth-child(7) a {
                     animation-delay: 0.7s;
                 }
-
             }
         }
     }
@@ -71,6 +70,7 @@
         position: absolute;
         right: 30px;
         cursor: pointer;
+        top: 51px;
     }
     &__socials {
         img {
@@ -88,17 +88,15 @@
             // margin-bottom: 85px;
             overflow: hidden;
             position: relative;
-            height: 120px;
+            height: 90px;
             a {
                 text-transform: uppercase;
-                font-size: 24px;
+                font-size: 18px;
                 color: #1d1d1b;
                 font-weight: 300;
-                position: absolute;
-                // transition: 0.3s;
+                position: absolute; // transition: 0.3s;
                 opacity: 0;
-                animation-fill-mode: forwards;
-                // position: relative;
+                animation-fill-mode: forwards; // position: relative;
                 &.active {
                     font-weight: 600;
                     color: #000;
@@ -113,6 +111,9 @@
 
 
     .socials-block {
+        position: absolute;
+        bottom: 10px;
+        min-height: auto;
         a {
             margin-left: 0;
             margin-right: 25px;
@@ -126,14 +127,12 @@
     from {
         // transform: translateY(100%);
         top: 120px;
-        opacity: 0;
-        // visibility: hidden;
+        opacity: 0; // visibility: hidden;
     }
 
     to {
         // transform: translateY(0);
         opacity: 1;
-        top: 0px;
-        // visibility: visible;
+        top: 0px; // visibility: visible;
     }
 }
