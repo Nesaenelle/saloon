@@ -248,6 +248,9 @@
     .product-page__details_price {
         font-size: 20px;
     }
+    .product-page__details_img_left, .product-page__details_img_right {
+        display: block;
+    }
     .news-page__list_item_hover {
         display: none;
     }
