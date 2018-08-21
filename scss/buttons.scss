@@ -30,7 +30,7 @@
         padding: 20px 40px;
         margin: auto;
         display: block;
-        border: 3px solid transparent;
+        border: 2px solid transparent;
         text-transform: uppercase;
         &:before {
             background: #000;
@@ -39,7 +39,7 @@
         }
         &:hover {
             color: #000;
-            border: 3px solid #000;
+            border: 2px solid #000;
             &:before {
                 width: 0%;
                 opacity: 1;
@@ -82,9 +82,18 @@
         letter-spacing: 1.5px; // border-radius: 2px;
         font-weight: 600;
         text-transform: uppercase;
+        // &:hover {
+        //     color: #fff;
+        //     &:before {
+        //         width: 100%;
+        //         opacity: 1;
+        //     }
+        // }
         &:hover {
             color: #fff;
+            // border: 2px solid #000;
             &:before {
+                background: #000;
                 width: 100%;
                 opacity: 1;
             }

@@ -1,20 +1,20 @@
 .contacts-page {
     #map {
-        height: 825px;
+        height: 600px;
         width: 100%;
     }
     &__phone {
         color: #2d2528;
-        font-size: 26px;
+        font-size: 20px;
         text-align: center;
-        margin-top: 65px;
+        margin-top: 40px;
         text-transform: uppercase;
         &[data-animate="true"] {
             animation-name: slideinUp;
             animation-duration: 1s;
         }
         &>div {
-            font-size: 26px;
+            font-size: 20px;
             letter-spacing: 2.4px;
             /* font-weight: 400; */
             margin-top: 11px;
@@ -22,7 +22,7 @@
     }
     &__email {
         color: #2d2528;
-        font-size: 26px;
+        font-size: 20px;
         text-align: center;
         margin-top: 12px;
         text-transform: uppercase;
@@ -31,7 +31,7 @@
             animation-name: slideinUp;
         }
         &>div {
-            font-size: 26px;
+            font-size: 20px;
             letter-spacing: 2.7px;
             /* font-weight: 400; */
             margin-top: 3px;
@@ -39,7 +39,7 @@
     }
     .grey-line {
         width: 91%;
-        margin: 89px auto;
+        margin: 50px auto;
         border: 1px solid #ccc;
         &[data-animate="true"] {
             animation-duration: 1s;
@@ -52,24 +52,24 @@
         justify-content: space-between;
         max-width: 1920px;
         &_item {
-            width: calc(50% - 9px);
-            margin-bottom: 71px;
-            &:nth-child(3),
-            &:nth-child(4) {
-                margin-bottom: 18px;
-            }
-            &:nth-child(odd) {
+            width: calc(100%/3 - 9px);
+            margin-bottom: 55px;
+            // &:nth-child(3),
+            // &:nth-child(4) {
+            //     margin-bottom: 18px;
+            // }
+            &:nth-child(3n+1) {
                 &[data-animate="true"] {
                     animation-name: slideinUp;
                     animation-duration: 1s;
                     .contacts-page__list_item_img {
                         animation-name: slideinUp;
                         animation-duration: 1s;
-                        animation-delay: 0.5s;
+                        animation-delay: 0s;
                     }
                 }
             }
-            &:nth-child(even) {
+            &:nth-child(3n+2) {
                 &[data-animate="true"] {
                     animation-name: slideinUp;
                     animation-duration: 1s;
@@ -77,7 +77,20 @@
                     .contacts-page__list_item_img {
                         animation-name: slideinUp;
                         animation-duration: 1s;
-                        animation-delay: 1s;
+                        animation-delay: 0.3s;
+                    }
+                }
+
+            }
+            &:nth-child(3n+3) {
+                &[data-animate="true"] {
+                    animation-name: slideinUp;
+                    animation-duration: 1s;
+                    animation-delay: 0.5s;
+                    .contacts-page__list_item_img {
+                        animation-name: slideinUp;
+                        animation-duration: 1s;
+                        animation-delay: 0.6s;
                     }
                 }
 
@@ -86,7 +99,7 @@
                 height: 255px;
             }
             &_address {
-                font-size: 24px;
+                font-size: 18px;
                 color: #2d2528;
                 font-weight: 400;
                 text-transform: uppercase;
@@ -96,7 +109,7 @@
                 letter-spacing: 2px;
             }
             &_place {
-                font-size: 24px;
+                font-size: 18px;
                 color: #2d2528;
                 text-transform: uppercase;
                 text-align: center;
@@ -110,7 +123,7 @@
                 height: 35px;
             }
             &_phone {
-                font-size: 24px;
+                font-size: 18px;
                 color: #2d2528;
                 text-transform: uppercase;
                 text-align: center;
@@ -130,7 +143,7 @@
                 }
             }
             &_time {
-                font-size: 24px;
+                font-size: 18px;
                 color: #2d2528;
                 text-transform: uppercase;
                 text-align: center;
@@ -146,7 +159,7 @@
             }
             &_img {
                 width: 100%;
-                margin-top: 61px;
+                margin-top: 40px;
                 overflow: hidden;
                 font-size: 0;
                 opacity: 0;
@@ -166,7 +179,7 @@
 
     .question-form {
 
-        margin-bottom: 122px;
+        margin-bottom: 80px;
         form {
             display: flex;
             justify-content: space-between;
@@ -176,8 +189,8 @@
                 animation-duration: 1s;
             }
             input {
-                padding: 21px 30px 20px;
-                font-size: 26px;
+                padding: 11px 20px 10px;
+                font-size: 18px;
                 margin-bottom: 31px;
                 font-weight: 300;
                 border-color: #b7b7b7;
@@ -199,14 +212,13 @@
                 }
             }
             textarea {
-                padding: 21px 30px 20px;
-                font-size: 28px;
+                padding: 11px 30px 10px;
+                font-size: 18px;
                 margin-bottom: 35px;
                 font-weight: 300;
                 border-color: #b7b7b7;
                 height: 194px;
                 letter-spacing: 1.4px;
-                font-size: 26px;
                 color: #a1a1a1;
                 &::-webkit-input-placeholder {
                     color: #a1a1a1;
@@ -228,10 +240,10 @@
             width: calc(45% + 10px);
         }
         &__title {
-            font-size: 36px;
+            font-size: 28px;
             text-align: center;
             color: #000;
-            margin: 99px 0 126px 0;
+            margin: 80px 0 126px 0;
             position: relative;
             text-transform: uppercase;
             font-weight: 300;
@@ -271,11 +283,11 @@
             background: rgba(0, 0, 0, .7);
         }
         .container {
-            padding: 96px 60px;
+            padding: 60px 60px;
             position: relative;
         }
         &__title {
-            font-size: 48px;
+            font-size: 36px;
             text-align: center;
             color: #fff;
             margin: 0;
@@ -287,7 +299,7 @@
                 animation-duration: 1s;
             }
             small {
-                font-size: 34px;
+                font-size: 26px;
                 display: block;
                 margin-top: -10px;
                 letter-spacing: 3.3px;
@@ -316,7 +328,7 @@
             }
         }
         form {
-            padding: 47px 0;
+            padding: 47px 0 60px 0;
             margin: auto;
             display: block;
             max-width: 682px;
@@ -327,8 +339,8 @@
                 animation-duration: 1s;
             }
             input {
-                padding: 24px 37px 20px 38px;
-                font-size: 24px;
+                padding: 11px 20px 10px 20px;
+                font-size: 18px;
                 margin-bottom: 31px;
                 font-weight: 300;
                 background: 0 0;
@@ -352,8 +364,9 @@
             }
         }
         .btn {
-            margin: 113px auto 92px;
-            padding: 18px 20px;
+            margin: 60px auto 0px;
+            font-size: 18px;
+            padding: 11px 20px 10px 20px;
         }
     }
 }

@@ -31,8 +31,8 @@
         .modal-body {
             display: flex;
             padding: 0;
-            width: 1428px;
-            height: 790px;
+            width: 1200px;
+            height: 650px;
 
             .modal-left {
                 background-size: cover!important;
@@ -43,7 +43,7 @@
             }
 
             .modal-title {
-                font-size: 36px;
+                font-size: 28px;
                 color: #000;
                 text-align: center;
                 width: 60%;
@@ -65,18 +65,20 @@
                 }
             }
             .btn {
-                margin: 30px auto 42px;
-                width: 307px;
-                padding: 17px 20px 12px 20px;
+                margin: 15px auto 42px;
+                width: 270px;
+                padding: 11px 13px 7px;
                 letter-spacing: 2px;
+                font-size: 20px;
             }
             form {
-                margin: 72px 0 0 0;
+                margin: 30px 0 0 0;
                 padding: 0 32px;
                 input {
                     border-color: #000;
-                    padding: 20px 33px 19px 33px;
+                    padding: 10px 24px 9px;
                     width: 100%;
+                    font-size: 16px;
                     color: #000;
                     &::-webkit-input-placeholder {
                         color: #000;
@@ -95,12 +97,12 @@
                 }
             }
             .modal-descr {
-                font-size: 24px;
+                font-size: 18px;
                 color: #7d7d7d;
                 text-align: center;
                 width: 100%;
                 text-transform: uppercase;
-                margin: 83px auto 0;
+                margin: 78px auto 0;
                 font-weight: 300;
                 letter-spacing: 1.2px;
                 line-height: 1.7em;
@@ -128,7 +130,7 @@
                 }
             }
             .modal-title {
-                font-size: 36px;
+                font-size: 28px;
                 color: #000;
                 text-align: center;
                 width: 100%;
@@ -290,43 +292,43 @@
         }
     }
 
-    &-input {
-        width: 100%;
-        input {
-            width: 100%;
-            padding: 20px 20px;
-            border: 1px solid #000;
-            border-radius: 2px;
-            font-family: 'Circe', sans-serif;
-            font-size: 18px;
-            outline: none;
-            &::-webkit-input-placeholder {
-                color: #000;
-            }
-            &::-moz-placeholder {
-                color: #000;
-            }
-            /* Firefox 19+ */
-            &:-moz-placeholder {
-                color: #000;
-            }
-            /* Firefox 18- */
-            &:-ms-input-placeholder {
-                color: #000;
-            }
-            &.invalid {
-                border-color: #f85359;
-            }
-            &.valid {
-                border-color: #39b54a;
-            }
-        }
-    }
+    // &-input {
+    //     width: 100%;
+    //     input {
+    //         width: 100%;
+    //         padding: 8px 24px 9px;
+    //         border: 1px solid #000;
+    //         border-radius: 2px;
+    //         font-family: 'Circe', sans-serif;
+    //         font-size: 14px;
+    //         outline: none;
+    //         &::-webkit-input-placeholder {
+    //             color: #000;
+    //         }
+    //         &::-moz-placeholder {
+    //             color: #000;
+    //         }
+    //         /* Firefox 19+ */
+    //         &:-moz-placeholder {
+    //             color: #000;
+    //         }
+    //         /* Firefox 18- */
+    //         &:-ms-input-placeholder {
+    //             color: #000;
+    //         }
+    //         &.invalid {
+    //             border-color: #f85359;
+    //         }
+    //         &.valid {
+    //             border-color: #39b54a;
+    //         }
+    //     }
+    // }
     &-bottom-text {
         color: #7c7c7c;
         text-align: center;
         font-size: 16px;
-        width: 65%;
+        width: 77%;
         margin: auto;
         a {
             text-decoration: underline;
@@ -405,7 +407,7 @@
                     .btn {
                         font-size: 16px;
                         width: 220px;
-                        padding: 16px 20px 13px;
+                        // padding: 16px 20px 13px;
                     }
                 }
                 .modal-bottom-text {
