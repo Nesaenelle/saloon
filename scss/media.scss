@@ -986,7 +986,7 @@
     }
     .product-page__details_right .btn {
         margin: 70px 0;
-        margin: 2px auto 45px;
+        margin: 15px auto 45px;
     }
     .product-page__details_thumbs_item {
         // width: 100px;
@@ -1491,6 +1491,9 @@
     .product-page__details_title {
         font-size: 14px;
         margin-top: 15px;
+    }
+    .product-page__details_price {
+        margin-top: 8px;
     }
 
     .home-page__item_text {
