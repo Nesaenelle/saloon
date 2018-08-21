@@ -476,6 +476,12 @@
     .modal[data-modal=online] .modal-body .modal-title {
         width: 90%;
     }
+
+    .modal[data-modal=online] .modal-body .modal__close, .modal[data-modal=team] .modal-body .modal__close {
+        width: 22px;
+        height: 22px;
+        top: -30px;
+    }
 }
 
 
