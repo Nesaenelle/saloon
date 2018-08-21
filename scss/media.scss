@@ -1125,6 +1125,7 @@
     .sidebar {
         // padding: 50px 10% 50px 10%;
         padding-left: 40px;
+        min-height: auto;
         &__close {
             display: block;
             top: 20px;
@@ -1134,6 +1135,9 @@
             // min-width: 230px;
             margin-top: 60px;
             // padding: 20px 20px 14px 20px;
+        }
+        .socials-block {
+            position: static;
         }
         ul {
             li {
