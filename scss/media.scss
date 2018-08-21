@@ -352,7 +352,7 @@
         padding: 0px;
     }
     .home-page__item_text {
-        font-size: 58px; // width: 1%;
+        font-size: 48px; // width: 1%;
     }
     .home-page__item {
         &:nth-child(2) {
@@ -1103,7 +1103,7 @@
         font-size: 28px;
     }
     .home-page__item_text {
-        font-size: 42px; // width: 1%;
+        font-size: 36px; // width: 1%;
     }
     .home-page__item_descr {
         display: none;
@@ -1474,7 +1474,7 @@
 
 @media screen and (max-width: 480px) {
     .home-page__item_text {
-        font-size: 38px;
+        font-size: 32px;
         &:after {
             display: none;
         }
@@ -1576,6 +1576,7 @@
     .services-page__addresses_toggle {
         font-size: 24px;
         line-height: 54px;
+        margin-bottom: 0px;
     }
 
     .vacancies-page__list_item_title {
@@ -1664,6 +1665,7 @@
     // .home-page__item {
     //     height: calc(100vh - 100px);
     // }
+
     .header {
         height: 100px;
     }
@@ -1688,6 +1690,6 @@
         line-height: 34px;
     }
     .home-page__item_text {
-        font-size: 32px;
+        font-size: 26px;
     }
 }
