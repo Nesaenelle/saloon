@@ -1033,7 +1033,7 @@
         .product-page__details_img_left,
         .product-page__details_img_right {
             background-size: contain;
-            width: 55px;
+            width: 45px;
         }
         .product-page__services_item_arrow {
             display: none;
@@ -1090,6 +1090,13 @@
         &:after {
             top: -32px;
         }
+    }
+    .shop-filter__menu span {
+        font-size: 20px;
+        margin-left: 55px;
+    }
+    .shop-filter__backet img, .shop-filter__menu img {
+        width: 40px;
     }
 }
 
@@ -1365,14 +1372,16 @@
         font-size: 48px;
         line-height: 60px;
     }
-
+    .shop-filter__backet img, .shop-filter__menu img {
+        width: 35px;
+    }
     .shop-filter__menu span {
-        font-size: 20px;
-        margin-left: 77px;
+        font-size: 18px;
+        // margin-left: 77px;
     }
-    .shop-filter__backet {
-        display: none;
-    }
+    // .shop-filter__backet {
+    //     display: none;
+    // }
 
     .slick-slider-wrapper .slick-slider {
         margin: 0;
