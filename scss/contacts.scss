@@ -58,12 +58,12 @@
         justify-content: space-between;
         max-width: 1920px;
         &_item {
-            width: calc(100%/3 - 9px);
+            width: calc(100%/2 - 9px);
             margin-bottom: 55px; // &:nth-child(3),
             // &:nth-child(4) {
             //     margin-bottom: 18px;
             // }
-            &:nth-child(3n+1) {
+            &:nth-child(odd) {
                 &[data-animate="true"] {
                     animation-name: slideinUp;
                     animation-duration: 1s;
@@ -74,7 +74,7 @@
                     }
                 }
             }
-            &:nth-child(3n+2) {
+            &:nth-child(even) {
                 &[data-animate="true"] {
                     animation-name: slideinUp;
                     animation-duration: 1s;
@@ -86,18 +86,18 @@
                     }
                 }
             }
-            &:nth-child(3n+3) {
-                &[data-animate="true"] {
-                    animation-name: slideinUp;
-                    animation-duration: 1s;
-                    animation-delay: 0.5s;
-                    .contacts-page__list_item_img {
-                        animation-name: slideinUp;
-                        animation-duration: 1s;
-                        animation-delay: 0.6s;
-                    }
-                }
-            }
+            // &:nth-child(3n+3) {
+            //     &[data-animate="true"] {
+            //         animation-name: slideinUp;
+            //         animation-duration: 1s;
+            //         animation-delay: 0.5s;
+            //         .contacts-page__list_item_img {
+            //             animation-name: slideinUp;
+            //             animation-duration: 1s;
+            //             animation-delay: 0.6s;
+            //         }
+            //     }
+            // }
             &_wrapper {
                 height: 170px;
             }
